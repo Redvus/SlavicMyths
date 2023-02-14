@@ -1,0 +1,72 @@
+#introS, #introM {
+    width: auto;
+    height: $introLetterHeight;
+    display: block;
+    position: absolute;
+    z-index: 2;
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-position: center;
+        object-fit: cover;
+    }
+}
+
+#introS {
+    top: -3%;
+    left: 0;
+}
+
+#introM {
+    top: 29%;
+    left: 18%;
+}
+
+#introSlavic,
+#introMyths {
+    width: auto;
+    height: $introTextHeight;
+    display: block;
+    position: absolute;
+    z-index: 2;
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-position: center;
+        object-fit: contain;
+    }
+}
+
+#introSlavic {
+    top: 7%;
+    left: 25%;
+}
+
+#introMyths {
+    top: 32%;
+    left: 57%;
+}
+
+#introButton {
+    width: auto;
+    height: $introButtonHeight;
+    display: block;
+    position: absolute;
+    bottom: 8%;
+    right: 10%;
+    cursor: pointer;
+    z-index: 3;
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-position: center;
+        object-fit: contain;
+    }
+}
+

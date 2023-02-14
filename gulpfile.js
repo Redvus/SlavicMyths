@@ -53,10 +53,13 @@ gulp.task('main-scss', function(){
 /*----------  JS  ----------*/
 gulp.task('app-js', function(){
     return gulp.src([
-        // path.src.js + 'nav.js',
+        path.src.js + 'Sounds.js',
+        path.src.js + 'Intro.js',
+        path.src.js + 'Choice.js',
+        path.src.js + 'Category.js',
         path.src.js + 'app.js'
     ])
-        // .pipe(concat('front.js'))
+        .pipe(concat('app.js'))
         .pipe(terser())
         .pipe(rename({suffix: "-min"}))
         .pipe(gulp.dest(path.dest.js));
@@ -98,7 +101,7 @@ gulp.task('preloader-js', function() {
 gulp.task('watch', function() {
     gulp.watch(path.watch.scss + '*.scss', gulp.series('main-scss'));
     gulp.watch(path.watch.js + 'vendor.js', gulp.series('vendor-js'));
-    gulp.watch(path.watch.js + 'app.js', gulp.series('app-js'));
+    gulp.watch([path.watch.js + 'app.js', path.watch.js + 'Sounds.js', path.watch.js + 'Intro.js', path.watch.js + 'Category.js', path.watch.js + 'Choice.js'], gulp.series('app-js'));
     gulp.watch(path.watch.js + 'preloader.js', gulp.series('preloader-js'));
     // gulp.watch(path.watch.js + 'jgrowl.js', gulp.series('jgrowl-js'));
 

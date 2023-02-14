@@ -2,40 +2,33 @@ let container = document.querySelector('.container'),
     wrapper = document.querySelector('.wrapper')
 ;
 
-function loadStart(obj, objClass, objImages) {
-    let startS = document.createElement(obj);
-    startS.className = objClass;
-    startS.innerHTML = `
-        <img src="${objImages}" alt="${objImages}">
-    `;
-    container.appendChild(startS);
+function introLoad() {
+    let introL = new Intro();
+    introL.introStart();
+}
 
-    let tl = gsap.timeline();
+function choiceLoad() {
+    let choiceL = new Choice();
+    choiceL.choiceCategory();
 
-    tl
-        .from(startS, {
-            duration: 1,
-            delay: 2,
-            autoAlpha: 0,
-            y: '-3%',
-            ease: 'back'
-        })
-    ;
+}
+function categoryLoad() {
+    let cat = new Category();
+    cat.categoriesStart('god/godBelbog.jpg', 'БЕЛБОГ', 'Светлый Бог Прави (Внешнего мира). Олицетворение добра, удачи, счастья, блага. Младший брат Чернобога. Выглядит как старик с седыми волосами, бородой и голубыми глазами. Одет в светлые одежды, в руках держит посох. Считается, что вселяет в человека веру и мысли о чем-то хорошем и добром, помогает заблудившимся в лесу, соблюдает порядок и справедливость в мире.');
+}
 
-    wrapper.addEventListener('click', function () {
-        gsap.to(startS, {
-            duration: 1,
-            delay: 0.5,
-            autoAlpha: 0,
-            onComplete: function () {
-                container.removeChild(startS);
-            }
-        });
-    });
+function titleSound() {
+    let titleCl = document.querySelector('.frame__left_title');
+    let sounds = new Sounds();
+    // titleCl.addEventListener('click', function () {
+    //     sounds.greeting();
+    // });
 }
 
 function init() {
-    loadStart('picture', 'container__back', 'images/containerBack.png');
+    introLoad();
+    // choiceLoad();
+    // categoryLoad();
 }
 
 init();

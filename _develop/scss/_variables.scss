@@ -1,0 +1,121 @@
+/*================================
+=            Variable            =
+================================*/
+
+$border_1: 1px solid $primary;
+$border_2: 2px solid $primary;
+$border_3: 3px solid $primary;
+
+$base-duration: 0.2s;
+$base-timing: 0.2s;
+
+// Layout
+$containerWidth: 48rem;
+$containerInsideWidth: 72%;
+
+$containerPadding: 3rem;
+
+$frameWidth: 46%;
+$frameHeight: 64vh;
+$frameLeft: 25%;
+$frameRight: 75%;
+
+$frameBackWidth: 85.5%;
+$frameBackLeftTop: 47%;
+$frameBackRightTop: 50%;
+
+// Intro
+$introLetterHeight: 70%;
+$introTextHeight: 25%;
+$introButtonHeight: 30%;
+
+/*=====  End of Variable  ======*/
+
+/*==============================
+=            Layout            =
+==============================*/
+body {
+    @extend %px;
+    margin: 0;
+    //background-color: #000;
+}
+
+h1 {
+    @extend %hx;
+    font-size: $font-size-h1;
+    color: $secondary;
+    //margin-bottom: 1em;
+    //text-align: center;
+    //transition: all .3s;
+}
+
+h2 {
+    @extend %hx;
+    font-size: $font-size-h2;
+    color: $secondary;
+}
+
+h3 {
+    @extend %hx;
+    font-size: $font-size-h3;
+    color: $secondary;
+}
+
+h4 {
+    @extend %hx;
+    font-size: $font-size-h4;
+    color: $secondary;
+}
+
+h5 {
+    @extend %hx;
+    font-size: $font-size-h5;
+    color: $secondary;
+}
+
+h6 {
+    @extend %hx;
+    font-size: $font-size-h6;
+    color: $secondary;
+}
+
+.large-text {
+    font-size: $font-size-large;
+}
+
+.small-text {
+    font-size: $font-size-small;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+
+        @include grid-media($Medium) {
+            font-size: $font-size-large;
+        }
+    }
+}
+
+a {
+    color: $primary;
+    text-decoration: none;
+    transition: color $base-duration;
+    outline: none;
+
+    // &:active,
+    // &:focus,
+    // &:hover {
+    //     //color: $action-color;
+    // }
+}
+
+svg {
+    transition: all 0.3s;
+}
+/*=====  End of Layout  ======*/
+

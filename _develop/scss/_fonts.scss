@@ -1,0 +1,119 @@
+/*=============================
+=            Fonts            =
+=============================*/
+
+//@include font-face (
+//    "fontawesome-webfont",
+//    "fonts/fontawesome-webfont/fontawesome-webfont",
+//    ("eot", "woff", "ttf", "svg")
+//    ) {
+//    font-style: normal;
+//    font-weight: 400;
+//}
+//
+@include font-face (
+    "A La Russ",
+    "../fonts/A_La_Russ",
+    ("woff")
+    ) {
+    font-style: normal;
+    font-weight: 400;
+}
+
+@include font-face (
+    "AGBengaly Roman",
+    "../fonts/AGBengaly",
+    ("woff", "woff2")
+) {
+    font-style: normal;
+    font-weight: 400;
+}
+
+//
+//@include font-face (
+//    "si",
+//    "fonts/socicon/socicon",
+//    ("eot", "woff", "ttf", "svg")) {
+//    font-weight: normal;
+//    font-style: normal;
+//}
+
+@import url('https://fonts.googleapis.com/css?family=PT+Mono&subset=cyrillic');
+
+$primary-font:          'AGBengaly Roman';
+$heading-font:          "A La Russ";
+$heading-font-light:    "";
+
+$body-font-color     : $primary;
+
+$body-font-size      : 1rem !default;
+$body-font-weight    : normal !default;
+$body-line-height    : 1.2 !default;
+$heading-line-height : 1 !default;
+
+$heading-font-modular : 1vw !default;
+
+$bourbon: (
+        "modular-scale-base": $heading-font-modular,
+        "modular-scale-ratio": $major-third,
+);
+
+$font-size-base:    $body-font-size !default;
+$font-size-large:   $font-size-base + 0.2 !default; // ~18px
+$font-size-small:   $font-size-base - 0.2 !default; // ~14px
+
+$font-size-h1:      calc(1rem + 3vmin) !default; // ~3rem 48px modular-scale(6)
+$font-size-h2:      calc(1rem + 2vmin) !default; // ~2.5rem 40px modular-scale(5)
+$font-size-h3:      modular-scale(4) !default; // ~2rem 33px
+$font-size-h4:      modular-scale(3) !default; // ~1.728rem 28px
+$font-size-h5:      modular-scale(2) !default; // ~1.44rem 23px
+$font-size-h6:      modular-scale(1) !default; // ~1.2rem 19px
+
+%px {
+    font: {
+        family: $primary-font;
+        weight: $body-font-weight;
+        size: $font-size-base;
+    };
+    line-height: $body-line-height;
+    color: $body-font-color;
+    margin: 0;
+    //text-indent: 1rem;
+
+    //@include grid-media($XXLarge) {
+    //    font-size: modular-scale(3);
+    //}
+    //
+    //@include grid-media($XLarge) {
+    //    font-size: $font-size-large;
+    //}
+
+    @include grid-media($Medium) {
+        font-size: $font-size-small;
+    }
+
+    @include grid-media($XSmall) {
+        font-size: $font-size-small;
+    }
+
+    @include grid-media($Small) {
+        font-size: $font-size-small;
+    }
+
+    @include grid-media($HSmall) {
+        font-size: $font-size-small;
+    }
+}
+
+%hx {
+    font: {
+        family: $heading-font;
+        weight: 400;
+    };
+    //letter-spacing: 0.04em;
+    line-height: $heading-line-height;
+    text-transform: uppercase;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+/*=====  End of Fonts  ======*/
