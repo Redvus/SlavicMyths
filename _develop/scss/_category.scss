@@ -1,0 +1,25 @@
+#choiceGod,
+#choiceCreatures,
+#choiceAnimals {
+    width: 100%;
+    height: calc(100% / 3);
+    display: block;
+    position: relative;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-position: center;
+        object-fit: contain;
+        transition: all $base-duration;
+    }
+
+    &:hover {
+
+        img {
+            transform: scale(0.99);
+        }
+    }
+}
