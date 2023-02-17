@@ -15,13 +15,15 @@ class Choice {
         `;
         container.appendChild(choiceBlock);
 
-        let tl = gsap.timeline(),
-            choiceGod = document.getElementById('choiceGod'),
+        let choiceGod = document.getElementById('choiceGod'),
             choiceCreatures = document.getElementById('choiceCreatures'),
             choiceAnimals = document.getElementById('choiceAnimals')
         ;
 
         function choiceAnim() {
+            let tl = gsap.timeline({
+                delay: '-0.2'
+            });
             tl
                 .fromTo([choiceAnimals, choiceCreatures, choiceGod], {
                     autoAlpha: 0,
@@ -31,12 +33,48 @@ class Choice {
                     delay: 0.3,
                     autoAlpha: 1,
                     y: 0,
-                    stagger: 0.3,
-                    easy: 'circ'
+                    stagger: 0.3
                 })
             ;
         }
-
         choiceAnim();
+
+        function clickCategory() {
+            let questLoad = new Question();
+            choiceGod.addEventListener('click', () => {
+                gsap.to(choiceBlock, {
+                    duration: 1,
+                    autoAlpha: 0,
+                    x: '-3%',
+                    onComplete: args => {
+                        container.removeChild(choiceBlock);
+                        questLoad.questStart('questBackImage.jpg', 'БЕЛБОГ', 'Светлый Бог Прави (Внешнего мира). Олицетворение добра, удачи, счастья, блага. Младший брат Чернобога. Выглядит как старик с седыми волосами, бородой и голубыми глазами. Одет в светлые одежды, в руках держит посох. Считается, что вселяет в человека веру и мысли о чем-то хорошем и добром, помогает заблудившимся в лесу, соблюдает порядок и справедливость в мире.');
+                    }
+                });
+            });
+            choiceAnimals.addEventListener('click', () => {
+                gsap.to(choiceBlock, {
+                    duration: 1,
+                    autoAlpha: 0,
+                    x: '-3%',
+                    onComplete: args => {
+                        container.removeChild(choiceBlock);
+                        questLoad.questStart('god/godBelbog.jpg', 'БЕЛБОГ', 'Выглядит как старик с седыми волосами, бородой и голубыми глазами. Одет в светлые одежды, в руках держит посох. Считается, что вселяет в человека веру и мысли о чем-то хорошем и добром, помогает заблудившимся в лесу, соблюдает порядок и справедливость в мире.');
+                    }
+                });
+            });
+            choiceCreatures.addEventListener('click', () => {
+                gsap.to(choiceBlock, {
+                    duration: 1,
+                    autoAlpha: 0,
+                    x: '-3%',
+                    onComplete: args => {
+                        container.removeChild(choiceBlock);
+                        questLoad.questStart('god/godBelbog.jpg', 'БЕЛБОГ', 'Светлый Бог Прави (Внешнего мира). Олицетворение добра, удачи, счастья, блага. Младший брат Чернобога. Выглядит как старик с седыми волосами, бородой и голубыми глазами.');
+                    }
+                });
+            });
+        }
+        clickCategory();
     }
 }

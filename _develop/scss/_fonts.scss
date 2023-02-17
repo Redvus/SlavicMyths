@@ -11,23 +11,34 @@
 //    font-weight: 400;
 //}
 //
-@include font-face (
-    "A La Russ",
-    "../fonts/A_La_Russ",
-    ("woff")
-    ) {
-    font-style: normal;
-    font-weight: 400;
+//@include font-face (
+//    "A La Russ",
+//    "../fonts/alaruss",
+//    ("woff", "woff2")
+//    ) {
+//    font-style: normal;
+//    font-weight: 400;
+//}
+
+@font-face {
+    font-family: "A La Russ";
+    src: local("A La Russ"),
+    url("alaruss.woff") format("woff");
 }
 
-@include font-face (
-    "AGBengaly Roman",
-    "../fonts/AGBengaly",
-    ("woff", "woff2")
-) {
-    font-style: normal;
-    font-weight: 400;
+@font-face {
+    font-family: "AGBengaly Roman";
+    src: local("AGBengaly Roman"),
+    url("AGBengaly.woff") format("woff");
 }
+//@include font-face (
+//    "AGBengaly Roman",
+//    "AGBengaly",
+//    ("woff")
+//) {
+//    font-style: normal;
+//    font-weight: 400;
+//}
 
 //
 //@include font-face (

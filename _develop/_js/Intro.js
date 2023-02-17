@@ -89,9 +89,7 @@ class Intro {
                     x: '-3%',
                     onComplete: args => {
                         container.removeChild(introBlock);
-                        setTimeout(function () {
-                            choiceCat.choiceCategory();
-                        }, 200);
+                        choiceCat.choiceCategory();
                     }
                 });
             })
