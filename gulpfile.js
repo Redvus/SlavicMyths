@@ -57,6 +57,7 @@ gulp.task('app-js', function(){
         path.src.js + 'Choice.js',
         path.src.js + 'Category.js',
         path.src.js + 'Question.js',
+        path.src.js + 'Quest.js',
         path.src.js + 'app.js'
     ])
         .pipe(concat('app.js'))
@@ -101,7 +102,7 @@ gulp.task('preloader-js', function() {
 gulp.task('watch', function() {
     gulp.watch(path.watch.scss + '*.scss', gulp.series('main-scss'));
     gulp.watch(path.watch.js + 'vendor.js', gulp.series('vendor-js'));
-    gulp.watch([path.watch.js + 'app.js', path.watch.js + 'Sounds.js', path.watch.js + 'Intro.js', path.watch.js + 'Category.js', path.watch.js + 'Choice.js', path.watch.js + 'Question.js'], gulp.series('app-js'));
+    gulp.watch([path.watch.js + 'app.js', path.watch.js + 'Sounds.js', path.watch.js + 'Intro.js', path.watch.js + 'Category.js', path.watch.js + 'Choice.js', path.watch.js + 'Question.js', path.watch.js + 'Quest.js'], gulp.series('app-js'));
     gulp.watch(path.watch.js + 'preloader.js', gulp.series('preloader-js'));
     // gulp.watch(path.watch.js + 'jgrowl.js', gulp.series('jgrowl-js'));
 

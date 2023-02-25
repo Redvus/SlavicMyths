@@ -5,19 +5,19 @@ class Intro {
         introBlock.className = 'container__wrapper';
         introBlock.innerHTML = `
             <picture id="introS">
-                <img src="images/startS.png" alt="Заглавная буква С">
+                <img src="slavicmyths/images/startS.png" alt="Заглавная буква С">
             </picture>
             <picture id="introSlavic">
-                <img src="images/startSlavic.png" alt="Славянские">
+                <img src="slavicmyths/images/startSlavic.png" alt="Славянские">
             </picture>
             <picture id="introM">
-                <img src="images/startM.png" alt="Заглавная буква М">
+                <img src="slavicmyths/images/startM.png" alt="Заглавная буква М">
             </picture>
             <picture id="introMyths">
-                <img src="images/startMyths.png" alt="Мифы">
+                <img src="slavicmyths/images/startMyths.png" alt="Мифы">
             </picture>
             <picture id="introButton">
-                <img src="images/startButton.png" alt="Запустить игру">
+                <img src="slavicmyths/images/startButton.png" alt="Запустить игру">
             </picture>
         `;
         container.appendChild(introBlock);
@@ -33,7 +33,7 @@ class Intro {
 
         function introAnim() {
             let tl = gsap.timeline({
-                onComplete: introButtonLoadNext
+                // onComplete: introButtonLoadNext
             });
 
             tl
@@ -45,7 +45,6 @@ class Intro {
                     delay: 0.3,
                     autoAlpha: 1,
                     x: 0,
-                    easy: 'circ'
                 })
                 .fromTo(introSlavic, {
                     autoAlpha: 0,
@@ -55,7 +54,6 @@ class Intro {
                     delay: '-0.7',
                     autoAlpha: 1,
                     x: 0,
-                    easy: 'circ'
                 })
                 .fromTo([introM, introMyth], {
                     autoAlpha: 0,
@@ -66,7 +64,6 @@ class Intro {
                     autoAlpha: 1,
                     x: 0,
                     stagger: 0.45,
-                    easy: 'circ'
                 })
                 .fromTo(introButton, {
                     autoAlpha: 0,
@@ -76,25 +73,23 @@ class Intro {
                     delay: '-0.8',
                     autoAlpha: 1,
                     y: 0,
-                    easy: 'circ'
                 })
             ;
         }
-
-        function introButtonLoadNext() {
-            introButton.addEventListener('click', function () {
-                gsap.to(introBlock, {
-                    duration: 1,
-                    autoAlpha: 0,
-                    x: '-3%',
-                    onComplete: args => {
-                        container.removeChild(introBlock);
-                        choiceCat.choiceCategory();
-                    }
-                });
-            })
-        }
-
         introAnim();
+
+        // function introButtonLoadNext() {
+        //     introButton.addEventListener('click', function () {
+        //         gsap.to(introBlock, {
+        //             duration: 1,
+        //             autoAlpha: 0,
+        //             x: '-3%',
+        //             onComplete: () => {
+        //                 container.removeChild(introBlock);
+        //                 choiceCat.choiceCategory();
+        //             }
+        //         });
+        //     })
+        // }
     }
 }
