@@ -110,13 +110,11 @@ class Question {
                     }
                 )
                 .fromTo(arrowNextLoad, {
-                    autoAlpha: 0,
-                    x: '-10%'
+                    autoAlpha: 0
                 }, {
                     duration: 0.4,
                     delay: '-0.4',
-                    autoAlpha: 1,
-                    x: 0
+                    autoAlpha: 1
                 })
             ;
         }

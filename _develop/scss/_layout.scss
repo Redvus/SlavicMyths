@@ -266,7 +266,7 @@
 					left: 50%;
 					text-align: center;
 					line-height: 1;
-					margin-top: -57%;
+					margin-top: -57.3%;
 					z-index: 5;
 					transform: translate(-50%, -50%);
 
@@ -306,16 +306,23 @@
 					}
 
 					span {
-						width: calc(100% - 2rem);
+						width: calc(100% - 2.6rem);
 						height: auto;
 						display: block;
 						position: absolute;
-						padding-left: 1rem;
-						padding-right: 1rem;
+						padding-left: 1.3rem;
+						padding-right: 1.3rem;
 						top: 50%;
 						left: 50%;
 						transform: translate(-50%, -50%);
 						z-index: 2;
+					}
+				}
+
+				@include grid-media($Medium) {
+
+					&_title {
+						margin-top: -56.7%;
 					}
 				}
 			}
@@ -465,8 +472,8 @@
 	}
 
 	@include grid-media($Large) {
-		width: calc(#{$containerWidth} + (#{$containerWidth} / 2));
-		height: calc((#{$containerWidth} + (#{$containerWidth} / 2)) / 1.57);
+		width: calc(#{$containerWidth} + (#{$containerWidth} / 3));
+		height: calc((#{$containerWidth} + (#{$containerWidth} / 3)) / 1.57);
 		//background-size: calc(#{$containerWidth} + (#{$containerWidth} / 2));
 	}
 
@@ -481,8 +488,8 @@
 	}
 
 	@include grid-media($XLarge) {
-		width: calc(#{$containerWidth} + (#{$containerWidth} / 2));
-		height: calc((#{$containerWidth} + (#{$containerWidth} / 2)) / 1.57);
+		width: calc(#{$containerWidth} + (#{$containerWidth} / 2.7));
+		height: calc((#{$containerWidth} + (#{$containerWidth} / 2.7)) / 1.57);
 		//background-size: calc(#{$containerWidth} + (#{$containerWidth} / 2));
 	}
 
