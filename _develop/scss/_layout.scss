@@ -319,6 +319,36 @@
 					}
 				}
 
+				&_text {
+					width: 70%;
+					height: 55vh;
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin-top: 1rem;
+					transform: translate(-50%, -50%);
+					z-index: 5;
+
+					p {
+						width: 100%;
+						height: auto;
+						display: block;
+						position: absolute;
+						margin: 0;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+					}
+
+					ul {
+
+						li {
+							font-size: $font-size-small;
+						}
+					}
+				}
+
 				@include grid-media($Medium) {
 
 					&_title {
@@ -386,6 +416,13 @@
 						top: 50%;
 						left: 50%;
 						transform: translate(-50%, -50%);
+					}
+
+					ul {
+
+						li {
+							font-size: $font-size-small;
+						}
 					}
 				}
 
@@ -471,6 +508,395 @@
 		}
 	}
 
+	&__about {
+		width: 100%;
+		height: 100vh;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url("../images/woodBack.jpg") 0 0 repeat;
+		overflow: hidden;
+		z-index: 11;
+
+		&_inside {
+			width: $containerWidth;
+			height: calc(#{$containerWidth} / 1.57);
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&_back {
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+
+			img {
+				width: 100%;
+				height: 100%;
+				display: block;
+				object-position: center;
+				object-fit: cover;
+			}
+		}
+
+		&_frame {
+			width: auto;
+			height: 100%;
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 3;
+
+			img {
+				width: 100%;
+				height: 100%;
+				display: block;
+				object-position: center;
+				object-fit: cover;
+			}
+
+			&back {
+				width: auto;
+				height: 90%;
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 2;
+
+				img {
+					width: 100%;
+					height: 100%;
+					display: block;
+					object-position: center;
+					object-fit: cover;
+				}
+			}
+		}
+
+		&_text {
+			width: calc(38% - 2rem);
+			height: calc(87% - 2rem);
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			padding: 1rem;
+			text-align: center;
+			transform: translate(-50%, -50%);
+			z-index: 2;
+		}
+
+		&_title {
+			color: $primary;
+			//margin-top: 0.3rem;
+		}
+
+		&_person {
+			margin-bottom: 0.3rem;
+
+			h3 {
+				margin: 0 0 0.3rem 0;
+				color: $primary;
+			}
+
+			p {
+				margin: 0;
+				font-size: $font-size-large;
+			}
+
+			&:last-child {
+				.container__about_line {
+					display: none;
+					visibility: hidden;
+				}
+			}
+		}
+
+		&_line {
+			width: 100%;
+			height: auto;
+			display: block;
+			position: relative;
+
+			img {
+				width: 100%;
+				height: 100%;
+				display: block;
+				object-position: center;
+				object-fit: cover;
+			}
+		}
+
+		&_arrow {
+			width: auto;
+			height: 5vmin;
+			display: block;
+			position: absolute;
+			bottom: 6vh;
+			left: 50%;
+			transform: translateX(-50%);
+			cursor: pointer;
+
+			img {
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: relative;
+				object-position: center;
+				object-fit: cover;
+			}
+		}
+
+		//@include grid-media($Large) {
+		//
+		//	&_inside {
+		//		width: calc(#{$containerWidth} + (#{$containerWidth} / 3));
+		//		height: calc((#{$containerWidth} + (#{$containerWidth} / 3)) / 1.57);
+		//	}
+		//}
+
+		@include grid-media($Medium) {
+
+			&_inside {
+				width: $containerWidth;
+				height: calc(#{$containerWidth} / 1.57);
+			}
+
+			&_person {
+				p {
+					font-size: $font-size-small;
+				}
+			}
+
+			&_title {
+				margin-top: 0.3rem;
+			}
+		}
+
+		@include grid-media($HSmall) {
+
+			&_inside {
+				width: $containerWidth;
+				height: calc(#{$containerWidth} / 1.57);
+			}
+
+			&_person {
+				p {
+					font-size: $font-size-small;
+				}
+			}
+
+			&_title {
+				margin-top: 0.3rem;
+			}
+		}
+	}
+
+	&__info {
+		width: 100%;
+		height: 100vh;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url("../images/woodBack.jpg") 0 0 repeat;
+		overflow: hidden;
+		z-index: 11;
+
+		&_inside {
+			width: $containerWidth;
+			height: calc(#{$containerWidth} / 1.57);
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&_frame {
+			width: 100%;
+			height: auto;
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -2rem;
+			transform: translate(-50%, -50%);
+			z-index: 3;
+
+			img {
+				width: 100%;
+				height: 100%;
+				display: block;
+				object-position: center;
+				object-fit: cover;
+			}
+		}
+
+		&_back {
+			width: 90%;
+			height: auto;
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			//margin-top: 2rem;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+
+			img {
+				width: 100%;
+				height: 100%;
+				display: block;
+				object-position: center;
+				object-fit: cover;
+			}
+		}
+
+		&_text {
+			width: calc(80% - 2rem);
+			height: calc(65% - 4rem);
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			padding: 2rem 1rem;
+			margin-top: 1.5rem;
+			text-align: center;
+			transform: translate(-50%, -50%);
+			z-index: 2;
+
+			p {
+				font-size: $font-size-large;
+			}
+		}
+
+		&_arrow {
+			width: auto;
+			height: 5vmin;
+			display: block;
+			position: absolute;
+			bottom: 6vh;
+			left: 50%;
+			transform: translateX(-50%);
+			cursor: pointer;
+
+			img {
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: relative;
+				object-position: center;
+				object-fit: cover;
+			}
+		}
+
+		@include grid-media($Medium) {
+
+			&_text {
+				p {
+					font-size: $font-size-small;
+				}
+			}
+		}
+
+		@include grid-media($HSmall) {
+
+			&_text {
+				p {
+					font-size: $font-size-small;
+				}
+			}
+		}
+	}
+
+	&__library {
+		width: 100%;
+		height: 100vh;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url("../images/woodBack.jpg") 0 0 repeat;
+		overflow: hidden;
+		z-index: 11;
+
+		&_inside {
+			width: $containerWidth;
+			height: calc(#{$containerWidth} / 1.57);
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&_arrow {
+			bottom: 3vh;
+		}
+
+		@include grid-media($Large) {
+
+			&_inside {
+				width: calc(#{$containerWidth} + (#{$containerWidth} / 3));
+				height: calc((#{$containerWidth} + (#{$containerWidth} / 3)) / 1.57);
+			}
+		}
+
+		@include grid-media($Medium) {
+
+			&_inside {
+				width: $containerWidth;
+				height: calc(#{$containerWidth} / 1.57);
+			}
+
+			&_person {
+				p {
+					font-size: $font-size-small;
+				}
+			}
+
+			&_title {
+				margin-top: 0.3rem;
+			}
+
+			&_arrow {
+				bottom: 6vh;
+			}
+		}
+
+		@include grid-media($HSmall) {
+
+			&_inside {
+				width: $containerWidth;
+				height: calc(#{$containerWidth} / 1.57);
+			}
+
+			&_person {
+				p {
+					font-size: $font-size-small;
+				}
+			}
+
+			&_title {
+				margin-top: 0.3rem;
+			}
+		}
+	}
+
 	@include grid-media($Large) {
 		width: calc(#{$containerWidth} + (#{$containerWidth} / 3));
 		height: calc((#{$containerWidth} + (#{$containerWidth} / 3)) / 1.57);
@@ -493,9 +919,5 @@
 		//background-size: calc(#{$containerWidth} + (#{$containerWidth} / 2));
 	}
 
-}
-
-.filled {
-	fill: $primary;
 }
 /* @end  */
