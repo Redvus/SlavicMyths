@@ -1,24 +1,45 @@
 function questionCreatures_1() {
     let questionGodsLoad = new Question();
-    questionGodsLoad.question('Средство, очень любимое Кикиморой: если учует его в доме, оставит хозяев в покое:', 'Богородичная трава', 'Лаванда', 'Настойка горького\nкорня папоротника');
-    let questGodsVarLoad = document.getElementById('questVar_3'),
+    questionGodsLoad.question('Средство, очень любимое Кикиморой: если учует его в доме, оставит хозяев в покое:', 'Богородичная трава', 'Лаванда', 'Настойка горького<br />корня папоротника');
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[2]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();
@@ -48,25 +69,46 @@ function questionCreatures_1() {
 
 function questionCreatures_2() {
     let questionGodsLoad = new Question();
-    questionGodsLoad.question('На этот праздник призывают знахаря, который потайными заговорами изгоняет Кикимору из избы.', 'День\nКуприану и Иустине', 'День\nГерасима-грачевника', 'День\nИвана Купала');
-    let questGodsVarLoad = document.getElementById('questVar_2'),
+    questionGodsLoad.question('На этот праздник призывают знахаря, который потайными заговорами изгоняет Кикимору из избы.', 'День<br />Куприану и Иустине', 'День<br />Герасима-грачевника', 'День<br />Ивана Купала');
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[1]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();
@@ -97,24 +139,45 @@ function questionCreatures_2() {
 function questionCreatures_3() {
     let questionGodsLoad = new Question();
     questionGodsLoad.question('Он нем, но голосист, умеет хохотать, аукаться, свистать и плакать по-людски, и если делается бессловесными, то только при встрече с настоящими, живыми людьми. Любит совершать проказы и шутки над людьми.', 'Домовой', 'Леший', 'Кощей Бессмертный');
-    let questGodsVarLoad = document.getElementById('questVar_2'),
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[1]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();
@@ -145,24 +208,45 @@ function questionCreatures_3() {
 function questionCreatures_4() {
     let questionGodsLoad = new Question();
     questionGodsLoad.question('Грозен, но справедлив, всегда встает на защиту нуждающихся в нем, но может покарать и провинившихся как перед собой, так и перед окружающими. Четыре раза в год меняет свой облик.', 'Китоврас', 'Полкан', 'Леший');
-    let questGodsVarLoad = document.getElementById('questVar_1'),
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[0]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();
@@ -193,24 +277,45 @@ function questionCreatures_4() {
 function questionCreatures_5() {
     let questionGodsLoad = new Question();
     questionGodsLoad.question('Живет в морской пучине рыба, поутру выходит на берег, скачет по лугам, по росе, сбрасывает с себя лихие болезни на пагубу человеку.', 'Водяной', 'Шишига', 'Чудо Морское');
-    let questGodsVarLoad = document.getElementById('questVar_3'),
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[2]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();
@@ -241,24 +346,45 @@ function questionCreatures_5() {
 function questionCreatures_6() {
     let questionGodsLoad = new Question();
     questionGodsLoad.question('Тёмная птица, тёмная сила, посланница властелина подземного мира.', 'Сирин', 'Гамаюн', 'Алконост');
-    let questGodsVarLoad = document.getElementById('questVar_1'),
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[0]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();
@@ -289,24 +415,45 @@ function questionCreatures_6() {
 function questionCreatures_7() {
     let questionGodsLoad = new Question();
     questionGodsLoad.question('Обитают в дремучих лесах, в неприступных горах, в подземных пещерах, строят из каменных глыб огромные храмы и святилища. О ком речь?', 'Лихо', 'Упыри', 'Волоты');
-    let questGodsVarLoad = document.getElementById('questVar_3'),
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[2]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();
@@ -337,24 +484,45 @@ function questionCreatures_7() {
 function questionCreatures_8() {
     let questionGodsLoad = new Question();
     questionGodsLoad.question('Эта трава верное средство от русалок.', 'Петрушка', 'Полынь трава', 'Чертополох');
-    let questGodsVarLoad = document.getElementById('questVar_2'),
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[1]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();

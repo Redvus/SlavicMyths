@@ -83,6 +83,13 @@ function choiceLoad() {
     clickCategory();
 }
 
+function questTest() {
+    let questQuest = new Quest();
+    let questLoads = new Question();
+    questQuest.questStart();
+    questLoads.question();
+}
+
 function aboutStart() {
     const aboutLoad = new About();
 
@@ -110,6 +117,7 @@ function init() {
     introLoad();
     // questLoad();
     // choiceLoad();
+    // questTest();
     aboutStart();
 }
 

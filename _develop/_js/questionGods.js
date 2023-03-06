@@ -1,24 +1,45 @@
 function questionGods_1() {
-let questionGodsLoad = new Question();
-questionGodsLoad.question('Что оставил на память людям бог Перун?', 'Палку', 'Молнию', 'Стрелу');
-let questGodsVarLoad = document.getElementById('questVar_1'),
-    questLeftInside = document.querySelector('.container__frame_left'),
-    questRightInside = document.querySelector('.container__frame_right'),
-    questLeftBlock = document.querySelector('.frame__left_change'),
-    questRightBlock = document.querySelector('.frame__right_change')
-;
+    let questionGodsLoad = new Question();
+    questionGodsLoad.question('Что оставил на память людям бог Перун?', 'Палку', 'Молнию', 'Стрелу');
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
+        questLeftInside = document.querySelector('.container__frame_left'),
+        questRightInside = document.querySelector('.container__frame_right'),
+        questLeftBlock = document.querySelector('.frame__left_change'),
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
+    ;
 
-questGodsVarLoad.addEventListener('click', () => {
-    gsap.to([questLeftBlock, questRightBlock], {
-        duration: 0.5,
-        autoAlpha: 0,
-        onComplete: () => {
-            questLeftInside.removeChild(questLeftBlock);
-            questRightInside.removeChild(questRightBlock);
-            answerGoodLoad();
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[0]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
         }
-    });
-});
+    }
 
 function answerGoodLoad() {
     let cat = new Question();
@@ -47,26 +68,47 @@ function answerGoodLoad() {
 }
 
 function questionGods_2() {
-let questionGodsLoad = new Question();
-questionGodsLoad.question('Первый земледелец, защищающий домашний скот от диких зверей. О ком идёт речь?', 'Дажьбог', 'Ярило', 'Хорс');
-let questGodsVarLoad = document.getElementById('questVar_2'),
-    questLeftInside = document.querySelector('.container__frame_left'),
-    questRightInside = document.querySelector('.container__frame_right'),
-    questLeftBlock = document.querySelector('.frame__left_change'),
-    questRightBlock = document.querySelector('.frame__right_change')
-;
+    let questionGodsLoad = new Question();
+    questionGodsLoad.question('Первый земледелец, защищающий домашний скот от диких зверей. О ком идёт речь?', 'Дажьбог', 'Ярило', 'Хорс');
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
+        questLeftInside = document.querySelector('.container__frame_left'),
+        questRightInside = document.querySelector('.container__frame_right'),
+        questLeftBlock = document.querySelector('.frame__left_change'),
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
+    ;
 
-questGodsVarLoad.addEventListener('click', () => {
-    gsap.to([questLeftBlock, questRightBlock], {
-        duration: 0.5,
-        autoAlpha: 0,
-        onComplete: () => {
-            questLeftInside.removeChild(questLeftBlock);
-            questRightInside.removeChild(questRightBlock);
-            answerGoodLoad();
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[1]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
         }
-    });
-});
+    }
 
 function answerGoodLoad() {
     let cat = new Question();
@@ -95,26 +137,47 @@ function answerGoodLoad() {
 }
 
 function questionGods_3() {
-let questionGodsLoad = new Question();
-questionGodsLoad.question('Кого называли покровителем охотничьей добычи, богом мертвого зверя?', 'Маансика', 'Велеса', 'Ваала');
-let questGodsVarLoad = document.getElementById('questVar_2'),
-    questLeftInside = document.querySelector('.container__frame_left'),
-    questRightInside = document.querySelector('.container__frame_right'),
-    questLeftBlock = document.querySelector('.frame__left_change'),
-    questRightBlock = document.querySelector('.frame__right_change')
-;
+    let questionGodsLoad = new Question();
+    questionGodsLoad.question('Кого называли покровителем охотничьей добычи, богом мертвого зверя?', 'Маансика', 'Велеса', 'Ваала');
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
+        questLeftInside = document.querySelector('.container__frame_left'),
+        questRightInside = document.querySelector('.container__frame_right'),
+        questLeftBlock = document.querySelector('.frame__left_change'),
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
+    ;
 
-questGodsVarLoad.addEventListener('click', () => {
-    gsap.to([questLeftBlock, questRightBlock], {
-        duration: 0.5,
-        autoAlpha: 0,
-        onComplete: () => {
-            questLeftInside.removeChild(questLeftBlock);
-            questRightInside.removeChild(questRightBlock);
-            answerGoodLoad();
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[1]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
         }
-    });
-});
+    }
 
 function answerGoodLoad() {
     let cat = new Question();
@@ -143,26 +206,47 @@ function answerGoodLoad() {
 }
 
 function questionGods_4() {
-let questionGodsLoad = new Question();
-questionGodsLoad.question('Кто она, богиня зимней стужи?', 'Снегурочка', 'Мокошь', 'Мара');
-let questGodsVarLoad = document.getElementById('questVar_3'),
-    questLeftInside = document.querySelector('.container__frame_left'),
-    questRightInside = document.querySelector('.container__frame_right'),
-    questLeftBlock = document.querySelector('.frame__left_change'),
-    questRightBlock = document.querySelector('.frame__right_change')
-;
+    let questionGodsLoad = new Question();
+    questionGodsLoad.question('Кто она, богиня зимней стужи?', 'Снегурочка', 'Мокошь', 'Мара');
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
+        questLeftInside = document.querySelector('.container__frame_left'),
+        questRightInside = document.querySelector('.container__frame_right'),
+        questLeftBlock = document.querySelector('.frame__left_change'),
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
+    ;
 
-questGodsVarLoad.addEventListener('click', () => {
-    gsap.to([questLeftBlock, questRightBlock], {
-        duration: 0.5,
-        autoAlpha: 0,
-        onComplete: () => {
-            questLeftInside.removeChild(questLeftBlock);
-            questRightInside.removeChild(questRightBlock);
-            answerGoodLoad();
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[2]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
         }
-    });
-});
+    }
 
 function answerGoodLoad() {
     let cat = new Question();
@@ -191,26 +275,47 @@ function answerGoodLoad() {
 }
 
 function questionGods_5() {
-let questionGodsLoad = new Question();
-questionGodsLoad.question('Как называют повелителя и верховного царя ветров?', 'Стрибог', 'Облакопрогонник', 'Ветродуй');
-let questGodsVarLoad = document.getElementById('questVar_1'),
-    questLeftInside = document.querySelector('.container__frame_left'),
-    questRightInside = document.querySelector('.container__frame_right'),
-    questLeftBlock = document.querySelector('.frame__left_change'),
-    questRightBlock = document.querySelector('.frame__right_change')
-;
+    let questionGodsLoad = new Question();
+    questionGodsLoad.question('Как называют повелителя и верховного царя ветров?', 'Стрибог', 'Облакопрогонник', 'Ветродуй');
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
+        questLeftInside = document.querySelector('.container__frame_left'),
+        questRightInside = document.querySelector('.container__frame_right'),
+        questLeftBlock = document.querySelector('.frame__left_change'),
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
+    ;
 
-questGodsVarLoad.addEventListener('click', () => {
-    gsap.to([questLeftBlock, questRightBlock], {
-        duration: 0.5,
-        autoAlpha: 0,
-        onComplete: () => {
-            questLeftInside.removeChild(questLeftBlock);
-            questRightInside.removeChild(questRightBlock);
-            answerGoodLoad();
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[0]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
         }
-    });
-});
+    }
 
 function answerGoodLoad() {
     let cat = new Question();
@@ -239,26 +344,47 @@ function answerGoodLoad() {
 }
 
 function questionGods_6() {
-let questionGodsLoad = new Question();
-questionGodsLoad.question('Коляду символично изображали снопом или соломенной куколкой.\nА на какой праздник её подносили, дарили?', 'Масленница', 'Рождество', 'Иван-Купала');
-let questGodsVarLoad = document.getElementById('questVar_2'),
-    questLeftInside = document.querySelector('.container__frame_left'),
-    questRightInside = document.querySelector('.container__frame_right'),
-    questLeftBlock = document.querySelector('.frame__left_change'),
-    questRightBlock = document.querySelector('.frame__right_change')
-;
+    let questionGodsLoad = new Question();
+    questionGodsLoad.question('Коляду символично изображали снопом или соломенной куколкой.\nА на какой праздник её подносили, дарили?', 'Масленница', 'Рождество', 'Иван-Купала');
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
+        questLeftInside = document.querySelector('.container__frame_left'),
+        questRightInside = document.querySelector('.container__frame_right'),
+        questLeftBlock = document.querySelector('.frame__left_change'),
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
+    ;
 
-questGodsVarLoad.addEventListener('click', () => {
-    gsap.to([questLeftBlock, questRightBlock], {
-        duration: 0.5,
-        autoAlpha: 0,
-        onComplete: () => {
-            questLeftInside.removeChild(questLeftBlock);
-            questRightInside.removeChild(questRightBlock);
-            answerGoodLoad();
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[1]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
         }
-    });
-});
+    }
 
 function answerGoodLoad() {
     let cat = new Question();
@@ -287,26 +413,47 @@ function answerGoodLoad() {
 }
 
 function questionGods_7() {
-let questionGodsLoad = new Question();
-questionGodsLoad.question('С моря-океана, с острова Буяна Весна-красна идёт, золотые ключи несёт. Зиму замыкает, лето выпускает: с водой ключевой, с травой-муравой, с корнем глубоким, со стеблем высоким. О ком так сказано?', 'Мара', 'Марцана', 'Лада');
-let questGodsVarLoad = document.getElementById('questVar_3'),
-    questLeftInside = document.querySelector('.container__frame_left'),
-    questRightInside = document.querySelector('.container__frame_right'),
-    questLeftBlock = document.querySelector('.frame__left_change'),
-    questRightBlock = document.querySelector('.frame__right_change')
-;
+    let questionGodsLoad = new Question();
+    questionGodsLoad.question('С моря-океана, с острова Буяна Весна-красна идёт, золотые ключи несёт. Зиму замыкает, лето выпускает: с водой ключевой, с травой-муравой, с корнем глубоким, со стеблем высоким. О ком так сказано?', 'Мара', 'Марцана', 'Лада');
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
+        questLeftInside = document.querySelector('.container__frame_left'),
+        questRightInside = document.querySelector('.container__frame_right'),
+        questLeftBlock = document.querySelector('.frame__left_change'),
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
+    ;
 
-questGodsVarLoad.addEventListener('click', () => {
-    gsap.to([questLeftBlock, questRightBlock], {
-        duration: 0.5,
-        autoAlpha: 0,
-        onComplete: () => {
-            questLeftInside.removeChild(questLeftBlock);
-            questRightInside.removeChild(questRightBlock);
-            answerGoodLoad();
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[2]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
         }
-    });
-});
+    }
 
 function answerGoodLoad() {
     let cat = new Question();
@@ -335,26 +482,47 @@ function answerGoodLoad() {
 }
 
 function questionGods_8() {
-let questionGodsLoad = new Question();
-questionGodsLoad.question('Радегаст – божество ратной славы. Голова какого зверя была изображена на его щите?', 'Медведя', 'Бычья', 'Льва');
-let questGodsVarLoad = document.getElementById('questVar_2'),
-    questLeftInside = document.querySelector('.container__frame_left'),
-    questRightInside = document.querySelector('.container__frame_right'),
-    questLeftBlock = document.querySelector('.frame__left_change'),
-    questRightBlock = document.querySelector('.frame__right_change')
-;
+    let questionGodsLoad = new Question();
+    questionGodsLoad.question('Радегаст – божество ратной славы. Голова какого зверя была изображена на его щите?', 'Медведя', 'Бычья', 'Льва');
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
+        questLeftInside = document.querySelector('.container__frame_left'),
+        questRightInside = document.querySelector('.container__frame_right'),
+        questLeftBlock = document.querySelector('.frame__left_change'),
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
+    ;
 
-questGodsVarLoad.addEventListener('click', () => {
-    gsap.to([questLeftBlock, questRightBlock], {
-        duration: 0.5,
-        autoAlpha: 0,
-        onComplete: () => {
-            questLeftInside.removeChild(questLeftBlock);
-            questRightInside.removeChild(questRightBlock);
-            answerGoodLoad();
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[1]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
         }
-    });
-});
+    }
 
 function answerGoodLoad() {
     let cat = new Question();

@@ -5,54 +5,64 @@
 //@include font-face (
 //    "fontawesome-webfont",
 //    "fonts/fontawesome-webfont/fontawesome-webfont",
-//    ("eot", "woff", "ttf", "svg")
+//    ("woff")
+//    ) {
+//    font-style: normal;
+//    font-weight: 400;
+//}
+
+//@include font-face (
+//    "A La Russ",
+//    "fonts/alaruss",
+//    ("woff")
 //    ) {
 //    font-style: normal;
 //    font-weight: 400;
 //}
 //
 //@include font-face (
-//    "A La Russ",
-//    "../fonts/alaruss",
-//    ("woff", "woff2")
+//    "AGBengaly Roman",
+//    "fonts/AGBengaly",
+//    ("woff")
 //    ) {
 //    font-style: normal;
 //    font-weight: 400;
 //}
 
 @font-face {
-    font-family: "A La Russ";
+    font-family:"A La Russ";
     src: local("A La Russ"),
-    url("alaruss.woff") format("woff");
+        url("alaruss.woff2") format("woff2"),
+        url("alaruss.woff") format("woff"),
+        url("alaruss.ttf") format("opentype");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:"FitaVjazC";
+    src: local("FitaVjazC"),
+    url("FitaVjazC.woff2") format("woff2"),
+    url("FitaVjazC.woff") format("woff"),
+    url("FitaVjazC.ttf") format("opentype");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "AGBengaly Roman";
     src: local("AGBengaly Roman"),
-    url("AGBengaly.woff") format("woff");
+    url("AGBengaly.woff") format("woff", "ttf");
 }
-//@include font-face (
-//    "AGBengaly Roman",
-//    "AGBengaly",
-//    ("woff")
-//) {
-//    font-style: normal;
-//    font-weight: 400;
-//}
 
-//
-//@include font-face (
-//    "si",
-//    "fonts/socicon/socicon",
-//    ("eot", "woff", "ttf", "svg")) {
-//    font-weight: normal;
-//    font-style: normal;
-//}
-
-@import url('https://fonts.googleapis.com/css?family=PT+Mono&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
 $primary-font:          'AGBengaly Roman';
-$heading-font:          "A La Russ";
+//$heading-font:          "A La Russ";
+$heading-font:          'Amatic SC', cursive;
+//$heading-font:          "FitaVjazC";
 $heading-font-light:    "";
 
 $body-font-color     : $primary;
@@ -120,7 +130,7 @@ $font-size-h6:      modular-scale(1) !default; // ~1.2rem 19px
 %hx {
     font: {
         family: $heading-font;
-        weight: 400;
+        weight: 700;
     };
     //letter-spacing: 0.04em;
     line-height: $heading-line-height;

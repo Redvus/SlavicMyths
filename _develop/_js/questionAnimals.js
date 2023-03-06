@@ -1,24 +1,45 @@
 function questionAnimals_1() {
     let questionGodsLoad = new Question();
     questionGodsLoad.question('Это животное было связано с древнейшим образом Богини-матери', 'Кошка', 'Корова', 'Коза');
-    let questGodsVarLoad = document.getElementById('questVar_2'),
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[1]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();
@@ -49,24 +70,45 @@ function questionAnimals_1() {
 function questionAnimals_2() {
     let questionGodsLoad = new Question();
     questionGodsLoad.question('Кого в традиции древних славян называли «спутниками богов»?', 'Мышей', 'Собак', 'Коней');
-    let questGodsVarLoad = document.getElementById('questVar_3'),
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[2]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();
@@ -97,24 +139,45 @@ function questionAnimals_2() {
 function questionAnimals_3() {
     let questionGodsLoad = new Question();
     questionGodsLoad.question('Какая птица не просто предвещает судьбу, а формирует её?', 'Аист', 'Лебедь', 'Кукушка');
-    let questGodsVarLoad = document.getElementById('questVar_1'),
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[0]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();
@@ -145,24 +208,45 @@ function questionAnimals_3() {
 function questionAnimals_4() {
     let questionGodsLoad = new Question();
     questionGodsLoad.question('С помощью этого дерева славяне связывались с лешим.', 'Ива', 'Рябина', 'Берёза');
-    let questGodsVarLoad = document.getElementById('questVar_3'),
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[2]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();
@@ -193,24 +277,45 @@ function questionAnimals_4() {
 function questionAnimals_5() {
     let questionGodsLoad = new Question();
     questionGodsLoad.question('Ведьмы облюбовали это дерево и, обернувшись птицами, сидят на его ветках. О каком дереве идёт речь?', 'Рябина', 'Осина', 'Ольха');
-    let questGodsVarLoad = document.getElementById('questVar_1'),
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[0]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();
@@ -241,24 +346,45 @@ function questionAnimals_5() {
 function questionAnimals_6() {
     let questionGodsLoad = new Question();
     questionGodsLoad.question('Эти животные спасают людей от нечистой силы:', 'Овца-бык', 'Коза', 'Конь–лошадь');
-    let questGodsVarLoad = document.getElementById('questVar_2'),
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[1]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();
@@ -289,24 +415,45 @@ function questionAnimals_6() {
 function questionAnimals_7() {
     let questionGodsLoad = new Question();
     questionGodsLoad.question('Древо это растёт сквозь все миры, являясь символической осью мироздания.', 'Вяз', 'Берёза', 'Дуб');
-    let questGodsVarLoad = document.getElementById('questVar_3'),
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[2]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();
@@ -337,24 +484,45 @@ function questionAnimals_7() {
 function questionAnimals_8() {
     let questionGodsLoad = new Question();
     questionGodsLoad.question('Зверь, очень любимый народом. Славяне говорили о связи этого животного с миром таинственным.', 'Собака', 'Кошка', 'Корова');
-    let questGodsVarLoad = document.getElementById('questVar_2'),
+    let questVar_1 = document.getElementById('questVar_1'),
+        questVar_2 = document.getElementById('questVar_2'),
+        questVar_3 = document.getElementById('questVar_3'),
         questLeftInside = document.querySelector('.container__frame_left'),
         questRightInside = document.querySelector('.container__frame_right'),
         questLeftBlock = document.querySelector('.frame__left_change'),
-        questRightBlock = document.querySelector('.frame__right_change')
+        questRightBlock = document.querySelector('.frame__right_change'),
+        questWrong = [questVar_1, questVar_2, questVar_3]
     ;
 
-    questGodsVarLoad.addEventListener('click', () => {
-        gsap.to([questLeftBlock, questRightBlock], {
-            duration: 0.5,
-            autoAlpha: 0,
-            onComplete: () => {
-                questLeftInside.removeChild(questLeftBlock);
-                questRightInside.removeChild(questRightBlock);
-                answerGoodLoad();
-            }
-        });
-    });
+    for (let i = 0; i < questWrong.length; i++) {
+        if (questWrong[i] == questWrong[1]) {
+            questWrong[i].addEventListener('click', () => {
+                gsap.to([questLeftBlock, questRightBlock], {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                    onComplete: () => {
+                        questLeftInside.removeChild(questLeftBlock);
+                        questRightInside.removeChild(questRightBlock);
+                        answerGoodLoad();
+                    }
+                });
+            });
+        }  else {
+            questWrong[i].addEventListener('click', () => {
+                let wrongBlock = document.querySelector('.frame__left_wrong');
+                gsap.to(wrongBlock, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    onComplete: () => {
+                        gsap.to(wrongBlock, {
+                            autoAlpha: 0,
+                            delay: 0.7
+                        });
+                    }
+                });
+            });
+        }
+    }
 
     function answerGoodLoad() {
         let cat = new Question();

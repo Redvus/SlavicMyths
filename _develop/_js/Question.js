@@ -17,6 +17,10 @@ class Question {
             <picture class="frame__left_quest">
                 <img src="slavicmyths/images/questBackText.png" alt="">
                 <span>${questTitle}</span>
+            </picture>
+            <picture class="frame__left_wrong">
+                <img src="slavicmyths/images/wrongChoiceBack.png" alt="Не правильный ответ">
+                <span>Не верно! Подумай</span>
             </picture>`;
         questBlockLeftChange.appendChild(questBlockLeft);
 

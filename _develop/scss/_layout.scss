@@ -292,7 +292,7 @@
 					left: 50%;
 					text-align: center;
 					line-height: 1;
-					margin-top: -40%;
+					margin-top: -38%;
 					z-index: 5;
 					transform: translate(-50%, -50%);
 
@@ -346,6 +346,47 @@
 						li {
 							font-size: $font-size-small;
 						}
+					}
+				}
+
+				&_wrong {
+					width: 80%;
+					height: auto;
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					text-align: center;
+					line-height: 1;
+					margin-top: 35%;
+					z-index: 5;
+					transform: translate(-50%, -50%);
+					opacity: 0;
+
+					img {
+						width: 100%;
+						height: 100%;
+						display: block;
+						object-position: center;
+						object-fit: cover;
+						position: relative;
+					}
+
+					span {
+						width: calc(100% - 2.6rem);
+						height: auto;
+						display: block;
+						position: absolute;
+						padding-left: 1.3rem;
+						padding-right: 1.3rem;
+						top: 50%;
+						left: 50%;
+						margin-top: 2%;
+						transform: translate(-50%, -50%);
+						font-family: $heading-font;
+						font-size: $font-size-h3;
+						font-weight: 700;
+						z-index: 2;
 					}
 				}
 
@@ -456,12 +497,12 @@
 					}
 
 					p {
-						width: calc(100% - 5rem);
+						width: calc(100% - 6rem);
 						height: auto;
 						display: block;
 						position: absolute;
-						padding-left: 2.5rem;
-						padding-right: 2.5rem;
+						padding-left: 3rem;
+						padding-right: 3rem;
 						margin: 0;
 						top: 50%;
 						left: 50%;
@@ -482,8 +523,8 @@
 	}
 
 	&__arrow {
-		width: auto;
-		height: 2rem;
+		width: 4rem;
+		height: auto;
 		display: block;
 		position: absolute;
 		cursor: pointer;
@@ -567,7 +608,7 @@
 			}
 
 			&back {
-				width: auto;
+				width: 40%;
 				height: 90%;
 				display: block;
 				position: absolute;
@@ -848,11 +889,19 @@
 			bottom: 3vh;
 		}
 
+		@include grid-media($XLarge) {
+
+			&_inside {
+				width: calc(#{$containerWidth} + (#{$containerWidth} / #{$containerIncrease}));
+				height: calc((#{$containerWidth} + (#{$containerWidth} / #{$containerIncrease})) / 1.57);
+			}
+		}
+
 		@include grid-media($Large) {
 
 			&_inside {
-				width: calc(#{$containerWidth} + (#{$containerWidth} / 3));
-				height: calc((#{$containerWidth} + (#{$containerWidth} / 3)) / 1.57);
+				width: calc(#{$containerWidth} + (#{$containerWidth} / #{$containerIncrease}));
+				height: calc((#{$containerWidth} + (#{$containerWidth} / #{$containerIncrease})) / 1.57);
 			}
 		}
 
@@ -898,8 +947,8 @@
 	}
 
 	@include grid-media($Large) {
-		width: calc(#{$containerWidth} + (#{$containerWidth} / 3));
-		height: calc((#{$containerWidth} + (#{$containerWidth} / 3)) / 1.57);
+		width: calc(#{$containerWidth} + (#{$containerWidth} / #{$containerIncrease}));
+		height: calc((#{$containerWidth} + (#{$containerWidth} / #{$containerIncrease})) / 1.57);
 		//background-size: calc(#{$containerWidth} + (#{$containerWidth} / 2));
 	}
 
@@ -914,8 +963,8 @@
 	}
 
 	@include grid-media($XLarge) {
-		width: calc(#{$containerWidth} + (#{$containerWidth} / 2.7));
-		height: calc((#{$containerWidth} + (#{$containerWidth} / 2.7)) / 1.57);
+		width: calc(#{$containerWidth} + (#{$containerWidth} / #{$containerIncrease}));
+		height: calc((#{$containerWidth} + (#{$containerWidth} / #{$containerIncrease})) / 1.57);
 		//background-size: calc(#{$containerWidth} + (#{$containerWidth} / 2));
 	}
 
