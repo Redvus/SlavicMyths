@@ -25,23 +25,20 @@ function questionAnimals_1() {
                     }
                 });
                 let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressSum = JSON.parse(localStorage.getItem('progress'));
                 if (progressLeftStorage === 2) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressFirst;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 1) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressSecond;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 0) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
@@ -120,23 +117,20 @@ function questionAnimals_2() {
                     }
                 });
                 let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressSum = JSON.parse(localStorage.getItem('progress'));
                 if (progressLeftStorage === 2) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressFirst;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 1) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressSecond;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 0) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
@@ -215,23 +209,20 @@ function questionAnimals_3() {
                     }
                 });
                 let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressSum = JSON.parse(localStorage.getItem('progress'));
                 if (progressLeftStorage === 2) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressFirst;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 1) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressSecond;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 0) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
@@ -310,23 +301,20 @@ function questionAnimals_4() {
                     }
                 });
                 let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressSum = JSON.parse(localStorage.getItem('progress'));
                 if (progressLeftStorage === 2) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressFirst;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 1) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressSecond;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 0) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
@@ -405,23 +393,20 @@ function questionAnimals_5() {
                     }
                 });
                 let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressSum = JSON.parse(localStorage.getItem('progress'));
                 if (progressLeftStorage === 2) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressFirst;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 1) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressSecond;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 0) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
@@ -500,23 +485,20 @@ function questionAnimals_6() {
                     }
                 });
                 let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressSum = JSON.parse(localStorage.getItem('progress'));
                 if (progressLeftStorage === 2) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressFirst;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 1) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressSecond;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 0) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
@@ -595,23 +577,20 @@ function questionAnimals_7() {
                     }
                 });
                 let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressSum = JSON.parse(localStorage.getItem('progress'));
                 if (progressLeftStorage === 2) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressFirst;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 1) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressSecond;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 0) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
@@ -690,23 +669,20 @@ function questionAnimals_8() {
                     }
                 });
                 let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressSum = JSON.parse(localStorage.getItem('progress'));
                 if (progressLeftStorage === 2) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressFirst;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 1) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum + progressSecond;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else if (progressLeftStorage === 0) {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
                 } else {
-                    let progressSum = JSON.parse(localStorage.getItem('progress'));
                     progressValue.textContent = progressSum;
                     let progressSum2 = parseInt(progressValue.textContent);
                     localStorage.setItem('progress', JSON.stringify(progressSum2));
