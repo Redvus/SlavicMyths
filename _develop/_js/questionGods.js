@@ -1,4 +1,18 @@
+let progressLeft = 2,
+    progressValue = document.getElementById('progressValue'),
+    progressFirst = 10,
+    progressSecond = 5,
+    progressBasic = 0
+;
+
+if (localStorage.getItem('progress') === null) {
+    localStorage.setItem('progress', JSON.stringify(progressBasic));
+} else {
+    progressValue.textContent = JSON.parse(localStorage.getItem('progress'));
+}
+
 function questionGods_1() {
+    localStorage.setItem('progressLeft', JSON.stringify(progressLeft));
     let questionGodsLoad = new Question();
     questionGodsLoad.question('Что оставил на память людям бог Перун?', 'Палку', 'Молнию', 'Стрелу');
     let questVar_1 = document.getElementById('questVar_1'),
@@ -23,6 +37,28 @@ function questionGods_1() {
                         answerGoodLoad();
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                if (progressLeftStorage === 2) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressFirst;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 1) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressSecond;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 0) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                }
             });
         }  else {
             questWrong[i].addEventListener('click', () => {
@@ -37,6 +73,9 @@ function questionGods_1() {
                         });
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressLeftWrong = progressLeftStorage - 1;
+                localStorage.setItem('progressLeft', JSON.stringify(progressLeftWrong));
             });
         }
     }
@@ -60,6 +99,7 @@ function answerGoodLoad() {
                 questLeftInside.removeChild(questLeftBlock);
                 questRightInside.removeChild(questRightBlock);
                 questContainer.removeChild(questNextLoad);
+                localStorage.setItem('progressLeft', JSON.stringify(progressLeft));
                 questionGods_2();
             }
         });
@@ -92,6 +132,28 @@ function questionGods_2() {
                         answerGoodLoad();
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                if (progressLeftStorage === 2) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressFirst;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 1) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressSecond;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 0) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                }
             });
         }  else {
             questWrong[i].addEventListener('click', () => {
@@ -106,6 +168,9 @@ function questionGods_2() {
                         });
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressLeftWrong = progressLeftStorage - 1;
+                localStorage.setItem('progressLeft', JSON.stringify(progressLeftWrong));
             });
         }
     }
@@ -129,6 +194,7 @@ function answerGoodLoad() {
                 questLeftInside.removeChild(questLeftBlock);
                 questRightInside.removeChild(questRightBlock);
                 questContainer.removeChild(questNextLoad);
+                localStorage.setItem('progressLeft', JSON.stringify(progressLeft));
                 questionGods_3();
             }
         });
@@ -161,6 +227,28 @@ function questionGods_3() {
                         answerGoodLoad();
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                if (progressLeftStorage === 2) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressFirst;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 1) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressSecond;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 0) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                }
             });
         }  else {
             questWrong[i].addEventListener('click', () => {
@@ -175,6 +263,9 @@ function questionGods_3() {
                         });
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressLeftWrong = progressLeftStorage - 1;
+                localStorage.setItem('progressLeft', JSON.stringify(progressLeftWrong));
             });
         }
     }
@@ -198,6 +289,7 @@ function answerGoodLoad() {
                 questLeftInside.removeChild(questLeftBlock);
                 questRightInside.removeChild(questRightBlock);
                 questContainer.removeChild(questNextLoad);
+                localStorage.setItem('progressLeft', JSON.stringify(progressLeft));
                 questionGods_4();
             }
         });
@@ -230,6 +322,28 @@ function questionGods_4() {
                         answerGoodLoad();
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                if (progressLeftStorage === 2) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressFirst;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 1) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressSecond;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 0) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                }
             });
         }  else {
             questWrong[i].addEventListener('click', () => {
@@ -244,6 +358,9 @@ function questionGods_4() {
                         });
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressLeftWrong = progressLeftStorage - 1;
+                localStorage.setItem('progressLeft', JSON.stringify(progressLeftWrong));
             });
         }
     }
@@ -267,6 +384,7 @@ function answerGoodLoad() {
                 questLeftInside.removeChild(questLeftBlock);
                 questRightInside.removeChild(questRightBlock);
                 questContainer.removeChild(questNextLoad);
+                localStorage.setItem('progressLeft', JSON.stringify(progressLeft));
                 questionGods_5();
             }
         });
@@ -299,6 +417,28 @@ function questionGods_5() {
                         answerGoodLoad();
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                if (progressLeftStorage === 2) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressFirst;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 1) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressSecond;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 0) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                }
             });
         }  else {
             questWrong[i].addEventListener('click', () => {
@@ -313,6 +453,9 @@ function questionGods_5() {
                         });
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressLeftWrong = progressLeftStorage - 1;
+                localStorage.setItem('progressLeft', JSON.stringify(progressLeftWrong));
             });
         }
     }
@@ -336,6 +479,7 @@ function answerGoodLoad() {
                 questLeftInside.removeChild(questLeftBlock);
                 questRightInside.removeChild(questRightBlock);
                 questContainer.removeChild(questNextLoad);
+                localStorage.setItem('progressLeft', JSON.stringify(progressLeft));
                 questionGods_6();
             }
         });
@@ -368,6 +512,28 @@ function questionGods_6() {
                         answerGoodLoad();
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                if (progressLeftStorage === 2) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressFirst;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 1) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressSecond;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 0) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                }
             });
         }  else {
             questWrong[i].addEventListener('click', () => {
@@ -382,6 +548,9 @@ function questionGods_6() {
                         });
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressLeftWrong = progressLeftStorage - 1;
+                localStorage.setItem('progressLeft', JSON.stringify(progressLeftWrong));
             });
         }
     }
@@ -405,6 +574,7 @@ function answerGoodLoad() {
                 questLeftInside.removeChild(questLeftBlock);
                 questRightInside.removeChild(questRightBlock);
                 questContainer.removeChild(questNextLoad);
+                localStorage.setItem('progressLeft', JSON.stringify(progressLeft));
                 questionGods_7();
             }
         });
@@ -437,6 +607,28 @@ function questionGods_7() {
                         answerGoodLoad();
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                if (progressLeftStorage === 2) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressFirst;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 1) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressSecond;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 0) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                }
             });
         }  else {
             questWrong[i].addEventListener('click', () => {
@@ -451,6 +643,9 @@ function questionGods_7() {
                         });
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressLeftWrong = progressLeftStorage - 1;
+                localStorage.setItem('progressLeft', JSON.stringify(progressLeftWrong));
             });
         }
     }
@@ -474,6 +669,7 @@ function answerGoodLoad() {
                 questLeftInside.removeChild(questLeftBlock);
                 questRightInside.removeChild(questRightBlock);
                 questContainer.removeChild(questNextLoad);
+                localStorage.setItem('progressLeft', JSON.stringify(progressLeft));
                 questionGods_8();
             }
         });
@@ -506,6 +702,28 @@ function questionGods_8() {
                         answerGoodLoad();
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                if (progressLeftStorage === 2) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressFirst;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 1) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum + progressSecond;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else if (progressLeftStorage === 0) {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                } else {
+                    let progressSum = JSON.parse(localStorage.getItem('progress'));
+                    progressValue.textContent = progressSum;
+                    let progressSum2 = parseInt(progressValue.textContent);
+                    localStorage.setItem('progress', JSON.stringify(progressSum2));
+                }
             });
         }  else {
             questWrong[i].addEventListener('click', () => {
@@ -520,6 +738,9 @@ function questionGods_8() {
                         });
                     }
                 });
+                let progressLeftStorage = JSON.parse(localStorage.getItem('progressLeft'));
+                let progressLeftWrong = progressLeftStorage - 1;
+                localStorage.setItem('progressLeft', JSON.stringify(progressLeftWrong));
             });
         }
     }

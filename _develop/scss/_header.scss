@@ -16,18 +16,31 @@
 
         li {
             width: inherit;
-            height: 1rem;
             display: inline-block;
             position: relative;
             padding: 0.5rem 0.5rem;
             text-shadow: 0.1rem 0.1rem 0.3rem $primary;
+            font-family: $heading-font;
+            font-size: $font-size-h2;
+            font-weight: 700;
+            color: $secondary;
 
             a {
                 width: auto;
                 height: 100%;
                 display: block;
                 font-family: $heading-font;
-                font-size: $font-size-large;
+                font-size: $font-size-h2;
+                font-weight: 700;
+                color: $secondary;
+            }
+
+            span {
+                width: auto;
+                height: 100%;
+                display: inline-block;
+                font-family: $heading-font;
+                font-size: $font-size-h2;
                 font-weight: 700;
                 color: $secondary;
             }

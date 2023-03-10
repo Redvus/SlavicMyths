@@ -139,3 +139,112 @@ $font-size-h6:      modular-scale(1) !default; // ~1.2rem 19px
     margin-bottom: 0.5em;
 }
 /*=====  End of Fonts  ======*/
+
+h1 {
+    @extend %hx;
+    font-size: $font-size-h1;
+    color: $primary;
+    //margin-bottom: 1em;
+    //text-align: center;
+    //transition: all .3s;
+}
+
+h2 {
+    @extend %hx;
+    font-size: $font-size-h2;
+    color: $secondary;
+}
+
+h3 {
+    @extend %hx;
+    font-size: $font-size-h3;
+    color: $secondary;
+}
+
+h4 {
+    @extend %hx;
+    font-size: $font-size-h4;
+    color: $secondary;
+}
+
+h5 {
+    @extend %hx;
+    font-size: $font-size-h5;
+    color: $secondary;
+}
+
+h6 {
+    @extend %hx;
+    font-size: $font-size-h6;
+    color: $secondary;
+}
+
+.large-text {
+    font-size: $font-size-large;
+}
+
+.small-text {
+    font-size: $font-size-small;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: disc;
+    margin-left: 0.9rem;
+    padding-left: -0.9rem;
+
+    li {
+        font-size: $font-size-base;
+    }
+
+    @include grid-media($Medium) {
+        margin-left: 0.6rem;
+        padding-left: -0.6rem;
+
+        li {
+            font-size: $font-size-small;
+        }
+    }
+
+    @include grid-media($XSmall) {
+        margin-left: 0.6rem;
+        padding-left: -0.6rem;
+
+        li {
+            font-size: $font-size-small;
+        }
+    }
+
+    @include grid-media($Small) {
+        margin-left: 0.6rem;
+        padding-left: -0.6rem;
+
+        li {
+            font-size: $font-size-small;
+        }
+    }
+
+    @include grid-media($HSmall) {
+        margin-left: 0.6rem;
+        padding-left: -0.6rem;
+
+        li {
+            font-size: $font-size-small;
+        }
+    }
+}
+
+a {
+    color: $primary;
+    text-decoration: none;
+    transition: color $base-duration;
+    outline: none;
+
+    // &:active,
+    // &:focus,
+    // &:hover {
+    //     //color: $action-color;
+    // }
+}
