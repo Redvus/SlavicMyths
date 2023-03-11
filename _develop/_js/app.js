@@ -2,6 +2,8 @@ let container = document.querySelector('.container'),
     wrapper = document.querySelector('.wrapper')
 ;
 
+const soundsLoad = new Sounds();
+
 // Заставка + выбор категории
 function introLoad() {
     let introL = new Intro();
@@ -12,6 +14,7 @@ function introLoad() {
 
     function introButtonLoadNext() {
         introButton.addEventListener('click', function () {
+            soundsLoad.greeting('sounds/gameStart.mp4');
             gsap.to(introBlock, {
                 duration: 1,
                 autoAlpha: 0,
@@ -115,11 +118,16 @@ function aboutStart() {
     });
 }
 
+function soundRightLoad() {
+    soundsLoad.rightAnswer('sounds/rightAnswer_2.mp3');
+}
+
+function soundEndLoad() {
+    soundsLoad.rightAnswer('sounds/rightAnswer.mp3');
+}
+
 function init() {
     introLoad();
-    // questLoad();
-    // choiceLoad();
-    // questTest();
     aboutStart();
 }
 

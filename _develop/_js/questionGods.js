@@ -28,6 +28,7 @@ function questionGods_1() {
     for (let i = 0; i < questWrong.length; i++) {
         if (questWrong[i] == questWrong[0]) {
             questWrong[i].addEventListener('click', () => {
+                soundRightLoad();
                 gsap.to([questLeftBlock, questRightBlock], {
                     duration: 0.5,
                     autoAlpha: 0,
@@ -120,6 +121,7 @@ function questionGods_2() {
     for (let i = 0; i < questWrong.length; i++) {
         if (questWrong[i] == questWrong[1]) {
             questWrong[i].addEventListener('click', () => {
+                soundRightLoad();
                 gsap.to([questLeftBlock, questRightBlock], {
                     duration: 0.5,
                     autoAlpha: 0,
@@ -212,6 +214,7 @@ function questionGods_3() {
     for (let i = 0; i < questWrong.length; i++) {
         if (questWrong[i] == questWrong[1]) {
             questWrong[i].addEventListener('click', () => {
+                soundRightLoad();
                 gsap.to([questLeftBlock, questRightBlock], {
                     duration: 0.5,
                     autoAlpha: 0,
@@ -304,6 +307,7 @@ function questionGods_4() {
     for (let i = 0; i < questWrong.length; i++) {
         if (questWrong[i] == questWrong[2]) {
             questWrong[i].addEventListener('click', () => {
+                soundRightLoad();
                 gsap.to([questLeftBlock, questRightBlock], {
                     duration: 0.5,
                     autoAlpha: 0,
@@ -396,6 +400,7 @@ function questionGods_5() {
     for (let i = 0; i < questWrong.length; i++) {
         if (questWrong[i] == questWrong[0]) {
             questWrong[i].addEventListener('click', () => {
+                soundRightLoad();
                 gsap.to([questLeftBlock, questRightBlock], {
                     duration: 0.5,
                     autoAlpha: 0,
@@ -488,6 +493,7 @@ function questionGods_6() {
     for (let i = 0; i < questWrong.length; i++) {
         if (questWrong[i] == questWrong[1]) {
             questWrong[i].addEventListener('click', () => {
+                soundRightLoad();
                 gsap.to([questLeftBlock, questRightBlock], {
                     duration: 0.5,
                     autoAlpha: 0,
@@ -580,6 +586,7 @@ function questionGods_7() {
     for (let i = 0; i < questWrong.length; i++) {
         if (questWrong[i] == questWrong[2]) {
             questWrong[i].addEventListener('click', () => {
+                soundRightLoad();
                 gsap.to([questLeftBlock, questRightBlock], {
                     duration: 0.5,
                     autoAlpha: 0,
@@ -672,6 +679,7 @@ function questionGods_8() {
     for (let i = 0; i < questWrong.length; i++) {
         if (questWrong[i] == questWrong[1]) {
             questWrong[i].addEventListener('click', () => {
+                soundEndLoad();
                 gsap.to([questLeftBlock, questRightBlock], {
                     duration: 0.5,
                     autoAlpha: 0,
