@@ -23,3 +23,12 @@
         }
     }
 }
+
+@include grid-media($Small) {
+    #choiceGod,
+    #choiceCreatures,
+    #choiceAnimals {
+        height: initial;
+        margin-bottom: 1rem;
+    }
+}

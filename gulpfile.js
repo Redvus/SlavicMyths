@@ -30,19 +30,19 @@ var path = {
 
 gulp.task('main-scss', function(){
     return gulp.src(path.src.scss + 'main.scss')
-        // .pipe(sourcemaps.init())
+        .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(prefixer({
             overrideBrowserslist: ['last 4 versions'],
             cascade: false
         }))
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        // .pipe(sourcemaps.write('.', {
-        //     addComment: true,
-        //     mapFile: function(mapFilePath) {
-        //         return mapFilePath.replace('.scss', '.map');
-        //     }
-        // }))
+        .pipe(sourcemaps.write('.', {
+            addComment: true,
+            mapFile: function(mapFilePath) {
+                return mapFilePath.replace('.scss', '.map');
+            }
+        }))
         .pipe(gulp.dest(path.dest.css));
     // .pipe(browserSync.reload({
     //     stream: true

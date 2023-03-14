@@ -54,14 +54,15 @@
 @font-face {
     font-family: "AGBengaly Roman";
     src: local("AGBengaly Roman"),
-    url("AGBengaly.woff") format("woff", "ttf");
+    url("AGBengaly.woff") format("woff"),
+    url("AGBengaly.woff2") format("woff2");
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
 $primary-font:          'AGBengaly Roman';
-//$heading-font:          "A La Russ";
-$heading-font:          'Amatic SC', cursive;
+$heading-font:          "A La Russ";
+//$heading-font:          'Amatic SC', cursive;
 //$heading-font:          "FitaVjazC";
 $heading-font-light:    "";
 
@@ -79,16 +80,16 @@ $bourbon: (
         "modular-scale-ratio": $major-third,
 );
 
-$font-size-base:    $body-font-size !default;
-$font-size-large:   $font-size-base + 0.2 !default; // ~18px
-$font-size-small:   $font-size-base - 0.23 !default; // ~14px
+$font-size-base:    calc(#{$body-font-size} - 0.25rem) !default;
+$font-size-large:   $font-size-base !default; // ~18px
+$font-size-small:   calc(#{$body-font-size} - 0.32rem) !default; // ~14px
 
-$font-size-h1:      calc(1rem + 2vmin) !default; // ~3rem 48px modular-scale(6)
-$font-size-h2:      calc(1rem + 1.5vmin) !default; // ~2.5rem 40px modular-scale(5)
-$font-size-h3:      calc(1rem + 1.1vmin) !default; // ~2rem 33px
-$font-size-h4:      modular-scale(3) !default; // ~1.728rem 28px
-$font-size-h5:      modular-scale(2) !default; // ~1.44rem 23px
-$font-size-h6:      modular-scale(1) !default; // ~1.2rem 19px
+$font-size-h1:      calc(1rem + 1.5vmin) !default; // ~3rem 48px modular-scale(6)
+$font-size-h2:      calc(1rem + 1vmin) !default; // ~2.5rem 40px modular-scale(5)
+$font-size-h3:      calc(1rem + 0.8vmin) !default; // ~2rem 33px
+$font-size-h4:      calc(1rem + 0.7vmin) !default; // ~1.728rem 28px
+$font-size-h5:      calc(1rem + 0.6vmin) !default; // ~1.44rem 23px
+$font-size-h6:      calc(1rem + 0.5vmin) !default; // ~1.2rem 19px
 
 %px {
     font: {
@@ -114,23 +115,24 @@ $font-size-h6:      modular-scale(1) !default; // ~1.2rem 19px
         //line-height: 1;
     }
 
-    @include grid-media($XSmall) {
+    @include grid-media($HSmall) {
         font-size: $font-size-small;
+    }
+
+    @include grid-media($XSmall) {
+        font-size: $font-size-base;
     }
 
     @include grid-media($Small) {
-        font-size: $font-size-small;
-    }
-
-    @include grid-media($HSmall) {
-        font-size: $font-size-small;
+        font-size: $font-size-base;
+        //line-height: 1.1;
     }
 }
 
 %hx {
     font: {
         family: $heading-font;
-        weight: 700;
+        weight: 500;
     };
     //letter-spacing: 0.04em;
     line-height: $heading-line-height;
@@ -153,6 +155,10 @@ h2 {
     @extend %hx;
     font-size: $font-size-h2;
     color: $secondary;
+
+    @include grid-media($Small) {
+        font-size: calc(1rem + 2vmin);
+    }
 }
 
 h3 {
@@ -187,7 +193,6 @@ h6 {
     font-size: $font-size-small;
 }
 
-
 ul {
     margin: 0;
     padding: 0;
@@ -217,7 +222,7 @@ ul {
         }
     }
 
-    @include grid-media($Small) {
+    @include grid-media($HSmall) {
         margin-left: 0.6rem;
         padding-left: -0.6rem;
 
@@ -226,12 +231,12 @@ ul {
         }
     }
 
-    @include grid-media($HSmall) {
-        margin-left: 0.6rem;
-        padding-left: -0.6rem;
+    @include grid-media($Small) {
+        margin-left: 0.9rem;
+        padding-left: -0.9rem;
 
         li {
-            font-size: $font-size-small;
+            font-size: $font-size-base;
         }
     }
 }

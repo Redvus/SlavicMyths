@@ -5,12 +5,12 @@ class Choice {
         choiceBlock.className = 'container__wrapper container__wrapper_padding';
         choiceBlock.innerHTML = `
             <picture id="choiceGod">
-                <img src="slavicmyths/images/choiceGod.png" alt="Выбор категории Боги">
+                <img src="assets/games/slavicmyths/images/choiceGod.png" alt="Выбор категории Боги">
             </picture>
             <picture id="choiceCreatures">
-                <img src="slavicmyths/images/choiceCreatures.png" alt="Выбор категории Существа">
+                <img src="assets/games/slavicmyths/images/choiceCreatures.png" alt="Выбор категории Существа">
             </picture><picture id="choiceAnimals">
-                <img src="slavicmyths/images/choiceAnimals.png" alt="Выбор категории Животные и растения">
+                <img src="assets/games/slavicmyths/images/choiceAnimals.png" alt="Выбор категории Животные и растения">
             </picture>
         `;
         container.appendChild(choiceBlock);

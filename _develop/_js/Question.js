@@ -9,39 +9,39 @@ class Question {
         questBlockRight.className = 'frame__right_change';
         questBlockLeft.innerHTML = `
             <picture class="frame__left_top">
-                <img src="slavicmyths/images/frameEmpty.png" alt="Рамка пустая">
+                <img src="assets/games/slavicmyths/images/frameEmpty.png" alt="Рамка пустая">
             </picture>
             <picture class="frame__left_back">
-                <img src="slavicmyths/images/questBackImage.jpg" alt="Сменная картинка">
+                <img src="assets/games/slavicmyths/images/questBackImage.jpg" alt="Сменная картинка">
             </picture>
             <picture class="frame__left_quest">
-                <img src="slavicmyths/images/questBackText.png" alt="">
+                <img src="assets/games/slavicmyths/images/questBackText.png" alt="">
                 <span>${questTitle}</span>
             </picture>
             <picture class="frame__left_wrong">
-                <img src="slavicmyths/images/wrongChoiceBack.png" alt="Не правильный ответ">
+                <img src="assets/games/slavicmyths/images/wrongChoiceBack.png" alt="Не правильный ответ">
                 <span>Не верно! Подумай</span>
             </picture>`;
         questBlockLeftChange.appendChild(questBlockLeft);
 
         questBlockRight.innerHTML = `
             <picture class="frame__right_top">
-                <img src="slavicmyths/images/frameEmpty.png" alt="Рамка пустая">
+                <img src="assets/games/slavicmyths/images/frameEmpty.png" alt="Рамка пустая">
             </picture>
             <picture class="frame__right_back">
-                <img src="slavicmyths/images/frameTextBack.jpg" alt="Задний фон под текстом">
+                <img src="assets/games/slavicmyths/images/frameTextBack.jpg" alt="Задний фон под текстом">
             </picture>
             <div class="frame__right_buttons">
                 <picture class="frame__right_button" id="questVar_1">
-                    <img src="slavicmyths/images/questButtonYellow.png" alt="Кнопка вопроса первая">
+                    <img src="assets/games/slavicmyths/images/questButtonYellow.png" alt="Кнопка вопроса первая">
                     <p>${questVar1}</p>
                 </picture>
                 <picture class="frame__right_button" id="questVar_2">
-                    <img src="slavicmyths/images/questButtonRed.png" alt="Кнопка вопроса вторая">
+                    <img src="assets/games/slavicmyths/images/questButtonRed.png" alt="Кнопка вопроса вторая">
                     <p>${questVar2}</p>
                 </picture>
                 <picture class="frame__right_button" id="questVar_3">
-                    <img src="slavicmyths/images/questButtonGreen.png" alt="Кнопка вопроса третья">
+                    <img src="assets/games/slavicmyths/images/questButtonGreen.png" alt="Кнопка вопроса третья">
                     <p>${questVar3}</p>
                 </picture>
             </div>`;
@@ -71,7 +71,7 @@ class Question {
         let arrowNext = document.createElement('picture');
         arrowNext.className = 'container__arrow container__arrow_next';
         arrowNext.innerHTML = `
-            <img src="slavicmyths/images/arrowNext.png" alt="Следующий вопрос">
+            <img src="assets/games/slavicmyths/images/arrowNext.png" alt="Следующий вопрос">
         `;
         containerInside.appendChild(arrowNext);
 
@@ -79,10 +79,10 @@ class Question {
         answerBlockRight.className = 'frame__right_change';
         answerBlockLeft.innerHTML = `
             <picture class="frame__left_top">
-                <img src="slavicmyths/images/frameTitle.png" alt="Рамка с названием">
+                <img src="assets/games/slavicmyths/images/frameTitle.png" alt="Рамка с названием">
             </picture>
             <picture class="frame__left_back">
-                <img src="slavicmyths/images/${answerImage}" alt="Сменная картинка">
+                <img src="assets/games/slavicmyths/images/${answerImage}" alt="Сменная картинка">
             </picture>
             <div class="frame__left_title">
                 <h2>${answerTitle}</h2>
@@ -91,10 +91,10 @@ class Question {
 
         answerBlockRight.innerHTML = `
             <picture class="frame__right_top">
-                <img src="slavicmyths/images/frameEmpty.png" alt="Рамка пустая">
+                <img src="assets/games/slavicmyths/images/frameEmpty.png" alt="Рамка пустая">
             </picture>
             <picture class="frame__right_back">
-                <img src="slavicmyths/images/frameTextBack.jpg" alt="Задний фон под текстом">
+                <img src="assets/games/slavicmyths/images/frameTextBack.jpg" alt="Задний фон под текстом">
             </picture>
             <div class="frame__right_text">
                 <p>${answerText}</p>

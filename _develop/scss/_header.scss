@@ -8,21 +8,23 @@
     z-index: 10;
 
     &__menu {
+        width: 100%;
         height: 100%;
         display: block;
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        text-align: center;
+        left: 0;
+        margin: 0;
 
         li {
-            width: inherit;
+            width: initial;
             display: inline-block;
             position: relative;
             padding: 0.5rem 0.5rem;
             text-shadow: 0.1rem 0.1rem 0.3rem $primary;
             font-family: $heading-font;
             font-size: $font-size-h2;
-            font-weight: 700;
+            font-weight: 500;
             color: $secondary;
 
             a {
@@ -31,7 +33,7 @@
                 display: block;
                 font-family: $heading-font;
                 font-size: $font-size-h2;
-                font-weight: 700;
+                font-weight: 500;
                 color: $secondary;
             }
 
@@ -41,8 +43,29 @@
                 display: inline-block;
                 font-family: $heading-font;
                 font-size: $font-size-h2;
-                font-weight: 700;
+                font-weight: 500;
                 color: $secondary;
+            }
+        }
+    }
+
+    @include grid-media($Small) {
+
+
+        &__menu {
+
+
+            li {
+                padding: 0.5rem 0.25rem;
+                font-size: $body-font-size;
+
+                a {
+                    font-size: $body-font-size;
+                }
+
+                span {
+                    font-size: $body-font-size;
+                }
             }
         }
     }

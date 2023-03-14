@@ -4,19 +4,19 @@ class Category {
         categories.className = 'container__wrapper';
         categories.innerHTML = `
             <picture class="container__back">
-                <img src="slavicmyths/images/containerBack.png" alt="Задний фон контейнера">
+                <img src="assets/games/slavicmyths/images/containerBack.png" alt="Задний фон контейнера">
             </picture>
             <div class="container__inside">
                 <picture class="container__inside_back">
-                    <img src="slavicmyths/images/paperBack.png" alt="Старая бумага как основной фон">
+                    <img src="assets/games/slavicmyths/images/paperBack.png" alt="Старая бумага как основной фон">
                 </picture>
     
                 <div class="container__frame container__frame_left">
                     <picture class="frame__left_top">
-                        <img src="slavicmyths/images/frameTitle.png" alt="Рамка с название">
+                        <img src="assets/games/slavicmyths/images/frameTitle.png" alt="Рамка с название">
                     </picture>
                     <picture class="frame__left_back">
-                        <img src="slavicmyths/images/${categoryImages}" alt="Сменная картинка">
+                        <img src="assets/games/slavicmyths/images/${categoryImages}" alt="Сменная картинка">
                     </picture>
                     <div class="frame__left_title">
                         <h2>${categoryTitle}</h2>
@@ -25,10 +25,10 @@ class Category {
     
                 <div class="container__frame container__frame_right">
                     <picture class="frame__right_top">
-                        <img src="slavicmyths/images/frameEmpty.png" alt="Рамка пустая">
+                        <img src="assets/games/slavicmyths/images/frameEmpty.png" alt="Рамка пустая">
                     </picture>
                     <picture class="frame__right_back">
-                        <img src="slavicmyths/images/frameTextBack.jpg" alt="Задний фон под текстом">
+                        <img src="assets/games/slavicmyths/images/frameTextBack.jpg" alt="Задний фон под текстом">
                     </picture>
                     <div class="frame__right_text">
                         <p>${categoryText}</p>

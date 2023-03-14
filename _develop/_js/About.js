@@ -6,13 +6,13 @@ class About {
         introBlock.innerHTML = `
             <div class="container__about_inside">
                 <picture id="aboutAuthorsBack" class="container__about_back">
-                    <img src="slavicmyths/images/aboutBack.png" alt="Фон информации об авторах">
+                    <img src="assets/games/slavicmyths/images/aboutBack.png" alt="Фон информации об авторах">
                 </picture>
                 <picture id="aboutAuthorsFrame" class="container__about_frame">
-                    <img src="slavicmyths/images/frameEmpty.png" alt="Рамка информации об авторах">
+                    <img src="assets/games/slavicmyths/images/frameEmpty.png" alt="Рамка информации об авторах">
                 </picture>
                 <picture id="aboutAuthorsFrameBack" class="container__about_frameback">
-                    <img src="slavicmyths/images/frameTextBack.jpg" alt="Фон рамки информации об авторах">
+                    <img src="assets/games/slavicmyths/images/frameTextBack.jpg" alt="Фон рамки информации об авторах">
                 </picture>
                 <div class="container__about_text">
                     <h1 class="container__about_title">Об авторах</h1>
@@ -20,34 +20,34 @@ class About {
                         <h3>${peronFirstTitle}</h3>
                         <p>${peronFirstName}</p>
                         <picture class="container__about_line">
-                            <img src="slavicmyths/images/aboutBrake.png" alt="Разделитель авторов">
+                            <img src="assets/games/slavicmyths/images/aboutBrake.png" alt="Разделитель авторов">
                         </picture>
                     </div>
                     <div class="container__about_person">
                         <h3>${peronSecondTitle}</h3>
                         <p>${peronSecondName}</p>
                         <picture class="container__about_line">
-                            <img src="slavicmyths/images/aboutBrake.png" alt="Разделитель авторов">
+                            <img src="assets/games/slavicmyths/images/aboutBrake.png" alt="Разделитель авторов">
                         </picture>
                     </div>
                     <div class="container__about_person">
                         <h3>${peronThirdTitle}</h3>
                         <p>${peronThirdName}</p>
                         <picture class="container__about_line">
-                            <img src="slavicmyths/images/aboutBrake.png" alt="Разделитель авторов">
+                            <img src="assets/games/slavicmyths/images/aboutBrake.png" alt="Разделитель авторов">
                         </picture>
                     </div>
                     <div class="container__about_person">
                         <h3>${peronFourthTitle}</h3>
                         <p>${peronFourthName}</p>
                         <picture class="container__about_line">
-                            <img src="slavicmyths/images/aboutBrake.png" alt="Разделитель авторов">
+                            <img src="assets/games/slavicmyths/images/aboutBrake.png" alt="Разделитель авторов">
                         </picture>
                     </div>
                 </div>
             </div>
             <picture class="container__about_arrow" id="arrowAboutBack">
-                <img src="slavicmyths/images/arrowBack.png" alt="Кнопка возврата в игру">
+                <img src="assets/games/slavicmyths/images/arrowBack.png" alt="Кнопка возврата в игру">
             </picture>
         `
         document.body.appendChild(introBlock);
@@ -121,10 +121,10 @@ class About {
         introBlock.innerHTML = `
             <div class="container__info_inside">
                 <picture id="aboutGameBack" class="container__info_frame">
-                    <img src="slavicmyths/images/aboutMainBack.png" alt="Фон информации об игре">
+                    <img src="assets/games/slavicmyths/images/aboutMainBack.png" alt="Фон информации об игре">
                 </picture>
                 <picture id="aboutGameFrameBack" class="container__info_back">
-                    <img src="slavicmyths/images/aboutMainPaper.png" alt="Фон рамки информации об авторах">
+                    <img src="assets/games/slavicmyths/images/aboutMainPaper.png" alt="Фон рамки информации об авторах">
                 </picture>
                 <div id="aboutGameFrameText" class="container__info_text">
                     <h1>${aboutGameTitle}</h1>
@@ -132,7 +132,7 @@ class About {
                 </div>
             </div>
             <picture class="container__about_arrow" id="arrowInfoBack">
-                <img src="slavicmyths/images/arrowBack.png" alt="Кнопка возврата в игру">
+                <img src="assets/games/slavicmyths/images/arrowBack.png" alt="Кнопка возврата в игру">
             </picture>
         `
         document.body.appendChild(introBlock);
@@ -189,18 +189,18 @@ class About {
         questBlock.innerHTML = `
             <div class="container__library_inside">
                 <picture class="container__back" id="containerLibraryBack">
-                    <img src="slavicmyths/images/containerBack.png" alt="Задний фон контейнера">
+                    <img src="assets/games/slavicmyths/images/containerBack.png" alt="Задний фон контейнера">
                 </picture>
                 <div class="container__inside">
                     <picture class="container__inside_back" id="containerLibraryPaper">
-                        <img src="slavicmyths/images/paperBack.png" alt="Старая бумага как основной фон">
+                        <img src="assets/games/slavicmyths/images/paperBack.png" alt="Старая бумага как основной фон">
                     </picture>
                     <div class="container__frame container__frame_left">
                         <picture class="frame__left_top" id="containerLibraryFrameLeft">
-                            <img src="slavicmyths/images/frameTitle.png" alt="Рамка с названием">
+                            <img src="assets/games/slavicmyths/images/frameTitle.png" alt="Рамка с названием">
                         </picture>
                         <picture class="frame__left_back" id="containerLibraryFrameLeftBack">
-                            <img src="slavicmyths/images/frameTextBack.jpg" alt="Задний фон под текстом">
+                            <img src="assets/games/slavicmyths/images/frameTextBack.jpg" alt="Задний фон под текстом">
                         </picture>
                         <div class="frame__left_title" id="containerLibraryTitle">
                             <h2>${libraryTitle}</h2>
@@ -211,10 +211,10 @@ class About {
                     </div>
                     <div class="container__frame container__frame_right">
                         <picture class="frame__right_top" id="containerLibraryFrameRight">
-                            <img src="slavicmyths/images/frameEmpty.png" alt="Рамка пустая">
+                            <img src="assets/games/slavicmyths/images/frameEmpty.png" alt="Рамка пустая">
                         </picture>
                         <picture class="frame__right_back" id="containerLibraryFrameRightBack">
-                            <img src="slavicmyths/images/frameTextBack.jpg" alt="Задний фон под текстом">
+                            <img src="assets/games/slavicmyths/images/frameTextBack.jpg" alt="Задний фон под текстом">
                         </picture>
                         <div class="frame__right_text" id="containerLibraryRightText">
                             <p>${libraryRightText}</p>
@@ -223,7 +223,7 @@ class About {
                 </div>
             </div>
             <picture class="container__about_arrow container__library_arrow" id="arrowLibraryBack">
-                <img src="slavicmyths/images/arrowBack.png" alt="Кнопка возврата в игру">
+                <img src="assets/games/slavicmyths/images/arrowBack.png" alt="Кнопка возврата в игру">
             </picture>
         `;
         document.body.appendChild(questBlock);

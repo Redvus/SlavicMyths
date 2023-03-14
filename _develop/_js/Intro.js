@@ -5,19 +5,19 @@ class Intro {
         introBlock.className = 'container__wrapper';
         introBlock.innerHTML = `
             <picture id="introS">
-                <img src="slavicmyths/images/startS.png" alt="Заглавная буква С">
+                <img src="assets/games/slavicmyths/images/startS.png" alt="Заглавная буква С">
             </picture>
             <picture id="introSlavic">
-                <img src="slavicmyths/images/startSlavic.png" alt="Славянские">
+                <img src="assets/games/slavicmyths/images/startSlavic.png" alt="Славянские">
             </picture>
             <picture id="introM">
-                <img src="slavicmyths/images/startM.png" alt="Заглавная буква М">
+                <img src="assets/games/slavicmyths/images/startM.png" alt="Заглавная буква М">
             </picture>
             <picture id="introMyths">
-                <img src="slavicmyths/images/startMyths.png" alt="Мифы">
+                <img src="assets/games/slavicmyths/images/startMyths.png" alt="Мифы">
             </picture>
             <picture id="introButton">
-                <img src="slavicmyths/images/startButton.png" alt="Запустить игру">
+                <img src="assets/games/slavicmyths/images/startButton.png" alt="Запустить игру">
             </picture>
         `;
         container.appendChild(introBlock);

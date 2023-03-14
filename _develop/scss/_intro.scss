@@ -70,3 +70,42 @@
     }
 }
 
+@include grid-media($Small) {
+    #introS, #introM {
+        height: $introLetterHeightMobile;
+    }
+
+    #introS {
+        top: 0;
+        left: initial;
+        right: 45vw;
+    }
+
+    #introM {
+        top: 30vh;
+        left: initial;
+        right: 22vw;
+    }
+
+    #introSlavic {
+        height: $introTextHeightMobile;
+        left: 42vw;
+        top: 11vh;
+    }
+
+    #introMyths {
+        height: $introTextHeightMobile;
+        left: 63vw;
+        //right: 2vw;
+        top: 40vh;
+    }
+
+    #introButton {
+        height: $introButtonHeightMobile;
+        top: 62vh;
+        right: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+

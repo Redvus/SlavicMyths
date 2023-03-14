@@ -4,18 +4,18 @@ class Quest {
         questBlock.className = 'container__wrapper';
         questBlock.innerHTML = `
             <picture class="container__back">
-                <img src="slavicmyths/images/containerBack.png" alt="Задний фон контейнера">
+                <img src="assets/games/slavicmyths/images/containerBack.png" alt="Задний фон контейнера">
             </picture>
             <div class="container__inside">
                 <picture class="container__inside_back">
-                    <img src="slavicmyths/images/paperBack.png" alt="Старая бумага как основной фон">
+                    <img src="assets/games/slavicmyths/images/paperBack.png" alt="Старая бумага как основной фон">
                 </picture>
     
                 <div class="container__frame container__frame_left"></div>
                 <div class="container__frame container__frame_right"></div>
                 
                 <picture class="container__arrow container__arrow_back" id="arrowBack">
-                    <img src="slavicmyths/images/arrowBack.png" alt="">
+                    <img src="assets/games/slavicmyths/images/arrowBack.png" alt="">
                 </picture>
             </div>`;
         container.appendChild(questBlock);

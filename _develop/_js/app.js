@@ -14,7 +14,7 @@ function introLoad() {
 
     function introButtonLoadNext() {
         introButton.addEventListener('click', function () {
-            soundsLoad.greeting('sounds/gameStart.mp4');
+            soundsLoad.greeting('assets/games/slavicmyths/sounds/gameStart.ogg');
             gsap.to(introBlock, {
                 duration: 1,
                 autoAlpha: 0,
@@ -119,16 +119,17 @@ function aboutStart() {
 }
 
 function soundRightLoad() {
-    soundsLoad.rightAnswer('sounds/rightAnswer_2.mp3');
+    soundsLoad.rightAnswer('assets/games/slavicmyths/sounds/rightAnswer_2.ogg');
 }
 
 function soundEndLoad() {
-    soundsLoad.rightAnswer('sounds/rightAnswer.mp3');
+    soundsLoad.rightAnswer('assets/games/slavicmyths/sounds/rightAnswer.ogg');
 }
 
 function init() {
     introLoad();
     aboutStart();
+    // questTest();
 }
 
 init();
