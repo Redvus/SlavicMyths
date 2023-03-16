@@ -115,12 +115,12 @@ $font-size-h6:      calc(1rem + 0.5vmin) !default; // ~1.2rem 19px
     }
 
     @include grid-media($Medium) {
-        font-size: $font-size-large;
+        font-size: $font-size-small;
         //line-height: 1;
     }
 
     @include grid-media($HSmall) {
-        font-size: $font-size-large;
+        font-size: $font-size-small;
     }
 
     @include grid-media($XSmall) {
@@ -208,16 +208,25 @@ ul {
         font-size: $font-size-base;
     }
 
-    @include grid-media($Medium) {
-        margin-left: 0.6rem;
-        padding-left: -0.6rem;
-
+    @include grid-media($XXLarge) {
         li {
-            font-size: $font-size-small;
+            font-size: $font-size-large;
         }
     }
 
-    @include grid-media($XSmall) {
+    @include grid-media($XLarge) {
+        li {
+            font-size: $font-size-large;
+        }
+    }
+
+    @include grid-media($Large) {
+        li {
+            font-size: $font-size-large;
+        }
+    }
+
+    @include grid-media($Medium) {
         margin-left: 0.6rem;
         padding-left: -0.6rem;
 
@@ -232,6 +241,15 @@ ul {
 
         li {
             font-size: $font-size-small;
+        }
+    }
+
+    @include grid-media($XSmall) {
+        margin-left: 0.6rem;
+        padding-left: -0.6rem;
+
+        li {
+            font-size: $font-size-base;
         }
     }
 

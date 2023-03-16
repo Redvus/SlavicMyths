@@ -715,6 +715,30 @@
 		//	}
 		//}
 
+		@include grid-media($XXLarge) {
+			&_person {
+				p {
+					font-size: $font-size-large;
+				}
+			}
+		}
+
+		@include grid-media($XLarge) {
+			&_person {
+				p {
+					font-size: $font-size-large;
+				}
+			}
+		}
+
+		@include grid-media($Large) {
+			&_person {
+				p {
+					font-size: $font-size-large;
+				}
+			}
+		}
+
 		@include grid-media($Medium) {
 
 			&_inside {
@@ -724,7 +748,7 @@
 
 			&_person {
 				p {
-					font-size: $font-size-small;
+					font-size: $font-size-large;
 				}
 			}
 
@@ -742,7 +766,7 @@
 
 			&_person {
 				p {
-					font-size: $font-size-small;
+					font-size: $font-size-large;
 				}
 			}
 
@@ -908,11 +932,35 @@
 			}
 		}
 
+		@include grid-media($XXLarge) {
+			&_text {
+				p {
+					font-size: $font-size-large;
+				}
+			}
+		}
+
+		@include grid-media($XLarge) {
+			&_text {
+				p {
+					font-size: $font-size-large;
+				}
+			}
+		}
+
+		@include grid-media($Large) {
+			&_text {
+				p {
+					font-size: $font-size-large;
+				}
+			}
+		}
+
 		@include grid-media($Medium) {
 
 			&_text {
 				p {
-					font-size: $font-size-small;
+					font-size: $font-size-large;
 				}
 			}
 		}
@@ -921,7 +969,7 @@
 
 			&_text {
 				p {
-					font-size: $font-size-small;
+					font-size: $font-size-large;
 				}
 			}
 		}
